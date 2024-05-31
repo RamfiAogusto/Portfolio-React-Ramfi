@@ -16,6 +16,7 @@ function App() {
     return (
         <div style={backgroundStyle} className="relative w-full min-h-screen">
             <AnimatedCursor
+                className="hidden md:block"
                 outerSize={20}
                 color="13, 158, 216"
                 outerAlpha={0.2}
