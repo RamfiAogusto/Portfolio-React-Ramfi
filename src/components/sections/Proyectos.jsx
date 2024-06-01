@@ -6,6 +6,7 @@ import drafa from "../../assets/proyectos/drafapeluqueria.jpg";
 import Burger from "../../assets/proyectos/Burger.png";
 import Shorten from "../../assets/proyectos/shorten.jpg";
 import Hoster from "../../assets/proyectos/hosterStarter.jpg";
+import Close from "../../assets/icons/close-circle-svgrepo-com.svg"
 // Importar iconos
 import iconCss from "../../assets/skills/CSS.png";
 import iconGithub from "../../assets/skills/GitHub.png";
@@ -27,8 +28,10 @@ function Proyectos() {
         {
             id: 1,
             titulo: "D'Rafa Peluquería",
-            descripcion: "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
-            descripcion2: "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
+            descripcion:
+                "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
+            descripcion2:
+                "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
             img: drafa,
             skills: [
                 iconHtml,
@@ -54,22 +57,37 @@ function Proyectos() {
         {
             id: 3,
             titulo: "Shorten API",
-            descripcion: "Shorten es un challenge de frontendmentor, Consiste en una pagina responsiva que permite cortar enlaces con el uso de una API y guardar el historial de los enlaces acortados.",
-            descripcion2: "Shorten es un challenge de frontendmentor, Consiste en una pagina responsiva que permite cortar enlaces con el uso de una API y guardar el historial de los enlaces acortados.",
+            descripcion:
+                "Shorten es un challenge de frontendmentor, Consiste en una pagina responsiva que permite cortar enlaces con el uso de una API y guardar el historial de los enlaces acortados.",
+            descripcion2:
+                "Shorten es un challenge de frontendmentor, Consiste en una pagina responsiva que permite cortar enlaces con el uso de una API y guardar el historial de los enlaces acortados.",
             img: Shorten,
-            skills: [iconHtml, iconCss, iconJavascript, iconApi, iconGit, iconGithub],
-            githubLink: "https://github.com/RamfiAogusto/url-shortening-api-master.github.io",
-            siteLink: "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
+            skills: [
+                iconHtml,
+                iconCss,
+                iconJavascript,
+                iconApi,
+                iconGit,
+                iconGithub,
+            ],
+            githubLink:
+                "https://github.com/RamfiAogusto/url-shortening-api-master.github.io",
+            siteLink:
+                "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
         },
         {
             id: 4,
             titulo: "Hoster Starter",
-            descripcion: "Este proyecto es una landing page sencilla que ofrece el servicio de hosting.",
-            descripcion2: "Este proyecto es una landing page sencilla que ofrece el servicio de hosting.",
+            descripcion:
+                "Este proyecto es una landing page sencilla que ofrece el servicio de hosting.",
+            descripcion2:
+                "Este proyecto es una landing page sencilla que ofrece el servicio de hosting.",
             img: Hoster,
             skills: [iconHtml, iconCss, iconJavascript, iconGit, iconGithub],
-            githubLink: "https://github.com/RamfiAogusto/url-shortening-api-master.github.io",
-            siteLink: "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
+            githubLink:
+                "https://github.com/RamfiAogusto/url-shortening-api-master.github.io",
+            siteLink:
+                "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
         },
     ];
 
@@ -128,7 +146,11 @@ function Proyectos() {
                                 {proyectos.map((proyecto) => {
                                     if (proyecto.id === selectedId) {
                                         return (
-                                            <div key={proyecto.id} className="flex flex-col md:flex-row gap-6 h-full overflow-hidden">
+                                            <div
+                                                key={proyecto.id}
+                                                className="flex relative flex-col md:flex-row gap-6 h-full overflow-hidden"
+                                            >
+                                                
                                                 <motion.div className="flex-none">
                                                     <motion.img
                                                         src={proyecto.img}
@@ -156,6 +178,12 @@ function Proyectos() {
                                                         {proyecto.descripcion2}
                                                     </motion.p>
                                                 </motion.div>
+                                                <div
+                                                    className="w-6 h-6 absolute right-2 top-1"
+                                                    onClick={
+                                                        ()=>{
+                                                        setSelectedId(null)}}
+                                                ><img src={Close} /></div>
                                             </div>
                                         );
                                     }
