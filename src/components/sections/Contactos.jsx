@@ -13,7 +13,7 @@ function Contactos() {
                 <TitleSection >Contacto</TitleSection>
 
                 <div className="container_contactos flex flex-wrap justify-center gap-[100px]  max-w-full">
-                    <div className="formulario max-w-fit">
+                    <div className="formulario max-w-full">
                         <form
                             action="https://formspree.io/f/mvoezknb"
                             method="POST"
