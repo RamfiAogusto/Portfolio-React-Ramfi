@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function Hero() {
     return (
         <header id="particles-Js">
-            <div className="hero min-h-screen overflow-hidden mb-10 md:mb-0 bg-white">
+            <div className="hero min-h-screen overflow-hidden mb-10 md:mb-0">
                 <div className="hero-content flex-col gap-8 lg:flex-row-reverse relative">
                     <motion.div
                         className="relative"
