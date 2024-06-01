@@ -20,6 +20,12 @@ body {
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 770px) {
+    #sombra {
+        display: none;
+    }
+}
+
 .timeline-section {
     padding: 50px 15px 25px;
 }
@@ -79,7 +85,6 @@ body {
     -webkit-backdrop-filter: blur(2.4px);
     border: 1px solid rgba(13, 158, 216, 0.43);
 }
-
 
 .timeline-content h3 {
     font-size: 20px;
