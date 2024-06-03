@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import Proyecto from "../Proyecto";
 import TitleSection from "../TitleSection";
 import drafa from "../../assets/proyectos/drafapeluqueria.jpg";
-import Burger from "../../assets/proyectos/Burger.png";
+import Burger from "../../assets/proyectos/Burger.jpg";
 import Shorten from "../../assets/proyectos/shorten.jpg";
 import Hoster from "../../assets/proyectos/hosterStarter.jpg";
-import Migracion from "../../assets/proyectos/Migracion.png"
+import Migracion from "../../assets/proyectos/Migracion.jpg"
 import Close from "../../assets/icons/close-circle-svgrepo-com.svg";
 // Importar iconos
 import iconCss from "../../assets/skills/CSS.png";
