@@ -60,9 +60,9 @@ function Proyectos() {
                 iconNodejs,
             ],
             githubLink:
-                "",
+                "https://github.com/RamfiAogusto/Portfolio-React-Ramfi",
             siteLink:
-                "",
+                "/",
         },
         {
             id: 3,
@@ -184,7 +184,7 @@ function Proyectos() {
                                                                     key={index}
                                                                     alt={`skill-${index}`}
                                                                     layout
-                                                                    className="max-w-8"
+                                                                    className="max-h-8"
                                                                 />
                                                             )
                                                         )}

@@ -45,7 +45,7 @@ function Skills() {
                 </div>
                 <div className="container_cards_skills flex gap-5 justify-center mb-28 flex-wrap">
                     <div className="card_skill skills_front">
-                        <h3>FRONT-END</h3>
+                        <h3 className="text-lg font-bold mt-2">FRONT-END</h3>
                         <ul>
                             <li>
                                 <img src={iconHtml} className="skill_img" />
@@ -91,7 +91,7 @@ function Skills() {
                         </ul>
                     </div>
                     <div className="card_skill skills_back">
-                        <h3>BACK-END</h3>
+                        <h3 className="text-lg font-bold mt-2">BACK-END</h3>
                         <ul>
                             <li>
                                 <img src={iconNodejs} className="skill_img" />
@@ -116,7 +116,7 @@ function Skills() {
                         </ul>
                     </div>
                     <div className="card_skill skills_otros">
-                        <h3>OTROS</h3>
+                        <h3 className="text-lg font-bold mt-2">OTROS</h3>
                         <ul>
                             <li>
                                 <img src={iconGit} className="skill_img" />

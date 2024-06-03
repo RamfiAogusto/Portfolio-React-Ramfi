@@ -9,14 +9,14 @@ function Hero() {
             <div className="hero min-h-screen overflow-hidden mb-10 md:mb-0">
                 <div className="hero-content flex-col gap-8 lg:flex-row-reverse relative">
                     <motion.div
-                        className="relative"
+                        className="relative delay-200"
                         initial={{ x: 400, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 0.8 }}
                     >
                         <motion.img
                             src={imgPerfil}
-                            className="max-w-sm rounded-full shadow-2xl"
+                            className="max-w-sm rounded-full shadow-2xl blur2 imghero"
                             animate={{ y: [0, 10, 0, 10, 0] }}
                             transition={{
                                 duration: 10,

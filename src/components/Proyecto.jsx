@@ -27,7 +27,7 @@ function Proyecto(props) {
                         key={index}
                         alt={`skill-${index}`}
                         layout
-                        className="max-w-8"
+                        className="max-h-7"
                     />
                 ))}
             </div>
