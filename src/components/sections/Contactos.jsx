@@ -7,10 +7,23 @@ import { motion } from "framer-motion";
 import TitleSection from "../TitleSection";
 
 function Contactos() {
+    const correo = "ramfiaogusto@gmail.com";
+    const copy = () => {
+        navigator.clipboard
+            .writeText(correo)
+            .then(() => {
+                alert("Correo copiado al portapapeles!");
+            })
+            .catch(console.error("Error al copiar portapapeles"));
+    };
+
     return (
         <>
-            <motion.section id="contactos" className="flex flex-col items-center pb-16">
-                <TitleSection >Contacto</TitleSection>
+            <motion.section
+                id="contactos"
+                className="flex flex-col items-center pb-16"
+            >
+                <TitleSection>Contacto</TitleSection>
 
                 <div className="container_contactos flex flex-wrap justify-center gap-[100px]  max-w-full">
                     <div className="formulario max-w-full">
@@ -104,6 +117,7 @@ function Contactos() {
                                 <button
                                     className="copiar-el-correo w-10 h-10 bg-transparent border-2 border-[var(--primary)] rounded-md shadow-[5px_5px_0_var(--primary)] transition-transform duration-200 ease-linear hover:bg-[var(--primary)] hover:translate-x-1.5 hover:translate-y-1.5 hover:shadow-none"
                                     id="copiar-el-correo"
+                                    onClick={copy}
                                 >
                                     <img
                                         src={iconCopy}

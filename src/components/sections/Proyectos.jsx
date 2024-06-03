@@ -6,7 +6,8 @@ import drafa from "../../assets/proyectos/drafapeluqueria.jpg";
 import Burger from "../../assets/proyectos/Burger.png";
 import Shorten from "../../assets/proyectos/shorten.jpg";
 import Hoster from "../../assets/proyectos/hosterStarter.jpg";
-import Close from "../../assets/icons/close-circle-svgrepo-com.svg"
+import Migracion from "../../assets/proyectos/Migracion.png"
+import Close from "../../assets/icons/close-circle-svgrepo-com.svg";
 // Importar iconos
 import iconCss from "../../assets/skills/CSS.png";
 import iconGithub from "../../assets/skills/GitHub.png";
@@ -30,8 +31,7 @@ function Proyectos() {
             titulo: "D'Rafa Peluquería",
             descripcion:
                 "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
-            descripcion2:
-                "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
+            descripcion2: `Este proyecto es un sitio web de multiples paginas con el propósito de promocionar los servicios de la peluquería "D'Rafa peluquería". En este proyecto utilice ReactJs para crear las interfaces de la pagina y React Router para obtener un enrutado dinámico en la pagina y un buen tiempo de respuesta al cambiar de pagina `,
             img: drafa,
             skills: [
                 iconHtml,
@@ -46,13 +46,23 @@ function Proyectos() {
         },
         {
             id: 2,
-            titulo: "Burger",
-            descripcion: "Un sitio web de Burgers creado con Bootstrap.",
-            descripcion2: "Un sitio web de Burgers creado con Bootstrap.",
-            img: Burger,
-            skills: [iconHtml, iconCss, iconJavascript, iconBootstrap],
-            githubLink: null,
-            siteLink: "https://bulguer.netlify.app/",
+            titulo: "Migración de tecnología",
+            descripcion:
+                "En este proyecto realizo la Migracion de mi portafolio de los lenguajes HTML, CSS y JavaScript a React.",
+            descripcion2:
+                "En este proyecto realizo la Migracion de mi portafolio de los lenguajes HTML, CSS y JavaScript a React, Con el objetivo de facilitar el mantenimiento del portafolio al dividirlo en componentes y utilizar multiples herramientas que proporciona React y la comunidad para hacer mi portafolio mas atractivo visualmente y que sea mas fácil de mantener.",
+            img: Migracion,
+            skills: [
+                iconHtml,
+                iconTailwind,
+                iconJavascript,
+                iconReact,
+                iconNodejs,
+            ],
+            githubLink:
+                "",
+            siteLink:
+                "",
         },
         {
             id: 3,
@@ -88,6 +98,17 @@ function Proyectos() {
                 "https://github.com/RamfiAogusto/url-shortening-api-master.github.io",
             siteLink:
                 "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
+        },
+        
+        {
+            id: 5,
+            titulo: "Burger",
+            descripcion: "Un sitio web de Burgers creado con Bootstrap.",
+            descripcion2: "Un sitio web de Burgers creado con Bootstrap.",
+            img: Burger,
+            skills: [iconHtml, iconCss, iconJavascript, iconBootstrap],
+            githubLink: null,
+            siteLink: "https://bulguer.netlify.app/",
         },
     ];
 
@@ -150,7 +171,6 @@ function Proyectos() {
                                                 key={proyecto.id}
                                                 className="flex relative flex-col md:flex-row gap-6 h-full overflow-hidden"
                                             >
-                                                
                                                 <motion.div className="flex-none">
                                                     <motion.img
                                                         src={proyecto.img}
@@ -178,12 +198,14 @@ function Proyectos() {
                                                         {proyecto.descripcion2}
                                                     </motion.p>
                                                 </motion.div>
-                                                <div
+                                                <a
                                                     className="w-6 h-6 absolute right-2 top-1"
-                                                    onClick={
-                                                        ()=>{
-                                                        setSelectedId(null)}}
-                                                ><img src={Close} /></div>
+                                                    onClick={() => {
+                                                        setSelectedId(null);
+                                                    }}
+                                                >
+                                                    <img src={Close} />
+                                                </a>
                                             </div>
                                         );
                                     }
