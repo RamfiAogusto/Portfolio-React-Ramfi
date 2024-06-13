@@ -6,7 +6,8 @@ import drafa from "../../assets/proyectos/drafapeluqueria.jpg";
 import Burger from "../../assets/proyectos/Burger.jpg";
 import Shorten from "../../assets/proyectos/shorten.jpg";
 import Hoster from "../../assets/proyectos/hosterStarter.jpg";
-import Migracion from "../../assets/proyectos/Migracion.jpg"
+import Migracion from "../../assets/proyectos/Migracion.jpg";
+import RestaurantVic from "../../assets/proyectos/restaurant-vic.png";
 import Close from "../../assets/icons/close-circle-svgrepo-com.svg";
 // Importar iconos
 import iconCss from "../../assets/skills/CSS.png";
@@ -28,6 +29,16 @@ function Proyectos() {
     const proyectos = [
         {
             id: 1,
+            titulo: "Restaurant Vic",
+            descripcion: "Un sitio web de Un restaurante creado con react.",
+            descripcion2: "Un sitio web de Un restaurante creado con react.",
+            img: RestaurantVic,
+            skills: [iconReact, iconTailwind, iconNodejs, iconReactRouter],
+            githubLink: "https://github.com/RamfiAogusto/Restaurant-Vic",
+            siteLink: "https://restaurant-vic.vercel.app/",
+        },
+        {
+            id: 2,
             titulo: "D'Rafa Peluquería",
             descripcion:
                 "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
@@ -45,7 +56,7 @@ function Proyectos() {
             siteLink: "https://dr-afa-peluqueria.vercel.app/",
         },
         {
-            id: 2,
+            id: 3,
             titulo: "Migración de tecnología",
             descripcion:
                 "En este proyecto realizo la Migracion de mi portafolio de los lenguajes HTML, CSS y JavaScript a React.",
@@ -65,7 +76,7 @@ function Proyectos() {
                 "/",
         },
         {
-            id: 3,
+            id: 4,
             titulo: "Shorten API",
             descripcion:
                 "Shorten es un challenge de frontendmentor, Consiste en una pagina responsiva que permite cortar enlaces con el uso de una API y guardar el historial de los enlaces acortados.",
@@ -86,7 +97,7 @@ function Proyectos() {
                 "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
         },
         {
-            id: 4,
+            id: 5,
             titulo: "Hoster Starter",
             descripcion:
                 "Este proyecto es una landing page sencilla que ofrece el servicio de hosting.",
@@ -101,7 +112,7 @@ function Proyectos() {
         },
         
         {
-            id: 5,
+            id: 6,
             titulo: "Burger",
             descripcion: "Un sitio web de Burgers creado con Bootstrap.",
             descripcion2: "Un sitio web de Burgers creado con Bootstrap.",
@@ -110,6 +121,7 @@ function Proyectos() {
             githubLink: null,
             siteLink: "https://bulguer.netlify.app/",
         },
+        
     ];
 
     useEffect(() => {
