@@ -8,6 +8,7 @@ function Hero() {
         <header id="particles-Js">
             <div className="hero min-h-screen overflow-hidden mb-10 md:mb-0">
                 <div className="hero-content flex-col gap-8 lg:flex-row-reverse relative">
+                    
                     <motion.div
                         className="relative delay-200"
                         initial={{ x: 400, opacity: 0 }}
