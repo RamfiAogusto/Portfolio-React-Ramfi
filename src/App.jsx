@@ -8,6 +8,7 @@ import Contactos from "./components/sections/Contactos";
 import imgBack from "./assets/descarga.png";
 import AnimatedCursor from "react-animated-cursor";
 
+
 function App() {
     const backgroundStyle = {
         backgroundImage: `url(${imgBack})`,

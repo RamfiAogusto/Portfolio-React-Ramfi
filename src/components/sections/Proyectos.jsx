@@ -30,8 +30,10 @@ function Proyectos() {
         {
             id: 1,
             titulo: "Restaurant Vic",
-            descripcion: "Un sitio web de Un restaurante creado con react.",
-            descripcion2: "Un sitio web de Un restaurante creado con react.",
+            descripcion:
+                "Un sitio web de Un restaurante creado con react, incluye un menu y categorias de los platos",
+            descripcion2:
+                `"Restaurant Vic" es un proyecto web desarrollado individualmente en el transcurso de tres dias. El objetivo principal fue crear una plataforma en línea para presentar un restaurante y su menú, organizado por categorías, con el fin de atraer a los clientes y permitirles explorar los platos disponibles. \n\nComo desarrollador único del proyecto, fui responsable de todos los aspectos del desarrollo, desde la conceptualización hasta la implementación final. Utilicé React.js como framework principal, aprovechando sus capacidades para crear una interfaz de usuario dinámica y responsive. \n\nTailwind CSS se empleó para estilizar la aplicación de manera eficiente, mientras que React Router se utilizó para la navegación entre las diferentes secciones del sitio El proyecto demuestra habilidades en el desarrollo front-end, con un enfoque en la creación de interfaces de usuario atractivas y funcionales para el sector de la restauración.`,
             img: RestaurantVic,
             skills: [iconReact, iconTailwind, iconNodejs, iconReactRouter],
             githubLink: "https://github.com/RamfiAogusto/Restaurant-Vic",
@@ -70,10 +72,8 @@ function Proyectos() {
                 iconReact,
                 iconNodejs,
             ],
-            githubLink:
-                "https://github.com/RamfiAogusto/Portfolio-React-Ramfi",
-            siteLink:
-                "/",
+            githubLink: "https://github.com/RamfiAogusto/Portfolio-React-Ramfi",
+            siteLink: "/",
         },
         {
             id: 4,
@@ -110,7 +110,7 @@ function Proyectos() {
             siteLink:
                 "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
         },
-        
+
         {
             id: 6,
             titulo: "Burger",
@@ -121,7 +121,6 @@ function Proyectos() {
             githubLink: null,
             siteLink: "https://bulguer.netlify.app/",
         },
-        
     ];
 
     useEffect(() => {
@@ -206,7 +205,7 @@ function Proyectos() {
                                                     <motion.h2 className="text-2xl">
                                                         {proyecto.titulo}
                                                     </motion.h2>
-                                                    <motion.p>
+                                                    <motion.p className="whitespace-pre-wrap">
                                                         {proyecto.descripcion2}
                                                     </motion.p>
                                                 </motion.div>
