@@ -55,7 +55,7 @@ function Proyectos() {
                 iconReactRouter,
             ],
             githubLink: null,
-            siteLink: "https://dr-afa-peluqueria.vercel.app/",
+            siteLink: "https://drafapeluqueria.vercel.app/",
         },
         {
             id: 3,
