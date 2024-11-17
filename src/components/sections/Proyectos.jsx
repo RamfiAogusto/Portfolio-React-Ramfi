@@ -111,16 +111,7 @@ function Proyectos() {
                 "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
         },
 
-        {
-            id: 6,
-            titulo: "Burger",
-            descripcion: "Un sitio web de Burgers creado con Bootstrap.",
-            descripcion2: "Un sitio web de Burgers creado con Bootstrap.",
-            img: Burger,
-            skills: [iconHtml, iconCss, iconJavascript, iconBootstrap],
-            githubLink: null,
-            siteLink: "https://bulguer.netlify.app/",
-        },
+       
     ];
 
     useEffect(() => {
