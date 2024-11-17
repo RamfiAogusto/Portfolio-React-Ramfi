@@ -142,7 +142,7 @@ function Proyectos() {
     return (
         <>
             <TitleSection>Últimos proyectos</TitleSection>
-            <div className="flex justify-center gap-3 relative transition mt-10 mb-40 flex-wrap">
+            <div className="flex justify-center gap-3 relative transition mt-10 mb-40 mx-40 flex-wrap">
                 {proyectos.map((proyecto) => (
                     <motion.div
                         key={proyecto.id}

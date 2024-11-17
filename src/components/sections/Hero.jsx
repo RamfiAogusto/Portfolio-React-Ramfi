@@ -10,10 +10,10 @@ function Hero() {
                 <div className="hero-content flex-col gap-8 lg:flex-row-reverse relative">
                     
                     <motion.div
-                        className="relative delay-200"
+                        className="relative"
                         initial={{ x: 400, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.8 }}
+                        transition={{ delay: 0.3 }}
                     >
                         <motion.img
                             src={imgPerfil}
