@@ -9,7 +9,14 @@
     --f: #3131314d;
     --dos: rgba(13, 158, 216, 0.767);
 }
+.hero-content {
+    transform-style: preserve-3d;
+}
 
+.absolute img {
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
 body {
     background-color: rgb(4, 7, 10);
     transition: ease 0.2s;

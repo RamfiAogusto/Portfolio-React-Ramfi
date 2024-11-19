@@ -35,7 +35,7 @@ function Proyectos() {
             descripcion2:
                 `"Restaurant Vic" es un proyecto web desarrollado individualmente en el transcurso de tres dias. El objetivo principal fue crear una plataforma en línea para presentar un restaurante y su menú, organizado por categorías, con el fin de atraer a los clientes y permitirles explorar los platos disponibles. \n\nComo desarrollador único del proyecto, fui responsable de todos los aspectos del desarrollo, desde la conceptualización hasta la implementación final. Utilicé React.js como framework principal, aprovechando sus capacidades para crear una interfaz de usuario dinámica y responsive. \n\nTailwind CSS se empleó para estilizar la aplicación de manera eficiente, mientras que React Router se utilizó para la navegación entre las diferentes secciones del sitio El proyecto demuestra habilidades en el desarrollo front-end, con un enfoque en la creación de interfaces de usuario atractivas y funcionales para el sector de la restauración.`,
             img: RestaurantVic,
-            skills: [iconReact, iconTailwind, iconNodejs, iconReactRouter],
+            skills: [iconReact, iconTailwind, /* iconNodejs,  */iconReactRouter],
             githubLink: "https://github.com/RamfiAogusto/Restaurant-Vic",
             siteLink: "https://restaurant-vic.vercel.app/",
         },
@@ -51,7 +51,7 @@ function Proyectos() {
                 iconTailwind,
                 iconJavascript,
                 iconReact,
-                iconNodejs,
+                /* iconNodejs, */
                 iconReactRouter,
             ],
             githubLink: null,
@@ -70,7 +70,7 @@ function Proyectos() {
                 iconTailwind,
                 iconJavascript,
                 iconReact,
-                iconNodejs,
+                /* iconNodejs, */
             ],
             githubLink: "https://github.com/RamfiAogusto/Portfolio-React-Ramfi",
             siteLink: "/",
@@ -158,6 +158,7 @@ function Proyectos() {
                                 className="fixed inset-0 bg-black bg-opacity-50 z-10"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
+                                transition={{ delay: 0.01 }}
                                 exit={{ opacity: 0 }}
                                 onClick={() => setSelectedId(null)}
                             />

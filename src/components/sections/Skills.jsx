@@ -21,6 +21,8 @@ import iconVercel from "../../assets/skills/vercel_dark.svg";
 import iconWordpress from "../../assets/skills/wordpress.svg";
 import iconVscode from "../../assets/skills/vscode.png";
 import TitleSection from "../TitleSection";
+import iconElementor from "../../assets/skills/elementor.svg";
+import iconSupabase from "../../assets/skills/supabase.svg";
 
 import { motion } from "framer-motion";
 
@@ -34,7 +36,7 @@ function Skills() {
                 initial={{ y: 400, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.1 }}
             >
                 <div className="subtitulo">
                     <ul className="line">
@@ -88,6 +90,10 @@ function Skills() {
                                 />
                                 <p className="skill_name">WordPress</p>
                             </li>
+                            <li>
+                                <img src={iconElementor} className="skill_img" />
+                                <p className="skill_name">Elementor</p>
+                            </li>
                         </ul>
                     </div>
                     <div className="card_skill skills_back">
@@ -104,6 +110,10 @@ function Skills() {
                             <li>
                                 <img src={iconMysql} className="skill_img" />
                                 <p className="skill_name">MySQL</p>
+                            </li>
+                            <li>
+                                <img src={iconSupabase} className="skill_img" />
+                                <p className="skill_name">Supabase</p>
                             </li>
                             <li>
                                 <img src={iconPhp} className="skill_img" />
