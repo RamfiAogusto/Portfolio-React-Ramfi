@@ -16,7 +16,7 @@ function Experiencia() {
         <div className="timeline-items">
           <div className="timeline-item">
             <div className="timeline-dot"></div>
-            <div className="timeline-date">2024</div>
+            <div className="timeline-date">2024 - Actualidad</div>
             <div className="timeline-content">
               <h3>Dentsu Dominicana | Desarrollador Web</h3>
               <p>
