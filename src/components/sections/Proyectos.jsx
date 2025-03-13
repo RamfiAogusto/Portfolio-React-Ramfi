@@ -26,6 +26,81 @@ function Proyectos() {
     const [selectedId, setSelectedId] = useState(null);
     const containerRef = useRef(null);
 
+    // Variantes para animaciones
+    const sectionVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                when: "beforeChildren",
+                staggerChildren: 0.2,
+                duration: 0.5
+            }
+        }
+    };
+
+    const titleVariants = {
+        hidden: { y: -30, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 10
+            }
+        }
+    };
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.2
+            }
+        }
+    };
+
+    const modalVariants = {
+        hidden: { opacity: 0, scale: 0.8, y: 50 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 25,
+                when: "beforeChildren",
+                staggerChildren: 0.1
+            }
+        },
+        exit: {
+            opacity: 0,
+            scale: 0.8,
+            y: 50,
+            transition: {
+                duration: 0.3,
+                ease: "easeInOut"
+            }
+        }
+    };
+
+    const modalContentVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 10
+            }
+        }
+    };
+
     const proyectos = [
         {
             id: 1,
@@ -110,8 +185,6 @@ function Proyectos() {
             siteLink:
                 "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
         },
-
-       
     ];
 
     useEffect(() => {
@@ -131,95 +204,216 @@ function Proyectos() {
     }, [containerRef]);
 
     return (
-        <>
-            <TitleSection>Últimos proyectos</TitleSection>
-            <div className="flex justify-center gap-3 relative transition mt-10 mb-40 mx-40 flex-wrap">
-                {proyectos.map((proyecto) => (
-                    <motion.div
-                        key={proyecto.id}
-                        layoutId={proyecto.id}
-                        onClick={() => setSelectedId(proyecto.id)}
-                    >
-                        <Proyecto
-                            titulo={proyecto.titulo}
-                            descripcion={proyecto.descripcion}
-                            skills={proyecto.skills}
-                            githubLink={proyecto.githubLink}
-                            siteLink={proyecto.siteLink}
-                            img={proyecto.img}
-                        />
-                    </motion.div>
-                ))}
-
-                <AnimatePresence>
-                    {selectedId && (
-                        <>
-                            <motion.div
-                                className="fixed inset-0 bg-black bg-opacity-50 z-10"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.01 }}
-                                exit={{ opacity: 0 }}
-                                onClick={() => setSelectedId(null)}
+        <motion.section
+            id="proyectos"
+            className="proyectos-section py-16 relative"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={sectionVariants}
+        >
+            {/* Elementos decorativos */}
+            <motion.div 
+                className="absolute -z-10 w-64 h-64 rounded-full bg-[var(--primary-light)] opacity-10 blur-3xl"
+                style={{ top: '10%', right: '-5%' }}
+                animate={{ 
+                    scale: [1, 1.2, 1],
+                    opacity: [0.05, 0.1, 0.05]
+                }}
+                transition={{ 
+                    duration: 10, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                }}
+            />
+            
+            <motion.div 
+                className="absolute -z-10 w-72 h-72 rounded-full bg-[var(--primary-light)] opacity-10 blur-3xl"
+                style={{ bottom: '15%', left: '-10%' }}
+                animate={{ 
+                    scale: [1, 1.3, 1],
+                    opacity: [0.05, 0.15, 0.05]
+                }}
+                transition={{ 
+                    duration: 15, 
+                    repeat: Infinity, 
+                    ease: "easeInOut",
+                    delay: 2
+                }}
+            />
+            
+            <div className="container mx-auto px-4">
+                <motion.div variants={titleVariants} className="mb-12">
+                    <TitleSection>Últimos proyectos</TitleSection>
+                </motion.div>
+                
+                <motion.div 
+                    className="flex flex-wrap justify-center gap-8"
+                    variants={containerVariants}
+                >
+                    {proyectos.map((proyecto, index) => (
+                        <motion.div
+                            key={proyecto.id}
+                            onClick={() => setSelectedId(proyecto.id)}
+                            className="proyecto-wrapper w-full sm:w-[450px] md:w-[400px] lg:w-[350px]"
+                            variants={containerVariants}
+                            custom={index}
+                            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                        >
+                            <Proyecto
+                                titulo={proyecto.titulo}
+                                descripcion={proyecto.descripcion}
+                                skills={proyecto.skills}
+                                githubLink={proyecto.githubLink}
+                                siteLink={proyecto.siteLink}
+                                img={proyecto.img}
                             />
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </div>
+
+            <AnimatePresence>
+                {selectedId && (
+                    <>
+                        <motion.div
+                            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSelectedId(null)}
+                        />
+                        <div className="fixed inset-0 flex items-center justify-center z-50">
                             <motion.div
-                                layoutId={selectedId}
-                                className="fixed top-[15%] transform -translate-x-1/2 w-11/12 md:w-2/3 h-4/5 p-4 rounded-md bg-slate-950 z-20 overflow-hidden"
+                                className="w-11/12 md:w-4/5 lg:w-3/4 max-h-[85vh] p-6 rounded-xl bg-[rgba(4,7,10,0.95)] border border-[rgba(13,158,216,0.3)] shadow-2xl overflow-auto"
                                 ref={containerRef}
+                                variants={modalVariants}
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
                             >
                                 {proyectos.map((proyecto) => {
                                     if (proyecto.id === selectedId) {
                                         return (
                                             <div
                                                 key={proyecto.id}
-                                                className="flex relative flex-col md:flex-row gap-6 h-full overflow-hidden"
+                                                className="flex relative flex-col md:flex-row gap-6 h-full max-h-[80vh] overflow-auto"
                                             >
-                                                <motion.div className="flex-none">
-                                                    <motion.img
-                                                        src={proyecto.img}
-                                                        className="max-h-52 rounded"
-                                                    />
-                                                    <motion.div className="skills flex my-3 gap-2">
+                                                <motion.div 
+                                                    className="flex-none md:w-2/5 mx-auto md:mx-0 max-w-full"
+                                                    variants={modalContentVariants}
+                                                >
+                                                    <motion.div className="relative rounded-lg overflow-hidden shadow-lg">
+                                                        <motion.img
+                                                            src={proyecto.img}
+                                                            className="w-full h-auto rounded-lg"
+                                                            initial={{ scale: 1 }}
+                                                            whileHover={{ scale: 1.05 }}
+                                                            transition={{ duration: 0.3 }}
+                                                        />
+                                                        <motion.div 
+                                                            className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-70"
+                                                        />
+                                                    </motion.div>
+                                                    
+                                                    <motion.div 
+                                                        className="skills flex flex-wrap my-4 gap-3 justify-center md:justify-start"
+                                                        variants={modalContentVariants}
+                                                    >
                                                         {proyecto.skills.map(
                                                             (skill, index) => (
                                                                 <motion.img
-                                                                    src={skill}
                                                                     key={index}
+                                                                    src={skill}
                                                                     alt={`skill-${index}`}
-                                                                    layout
                                                                     className="max-h-8"
+                                                                    whileHover={{ 
+                                                                        y: -3, 
+                                                                        scale: 1.2,
+                                                                        filter: "drop-shadow(0 0 3px rgba(13, 158, 216, 0.5))"
+                                                                    }}
                                                                 />
                                                             )
                                                         )}
                                                     </motion.div>
+                                                    
+                                                    <motion.div 
+                                                        className="flex gap-4 mt-4"
+                                                        variants={modalContentVariants}
+                                                    >
+                                                        <motion.a
+                                                            href={proyecto.siteLink}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex-1 py-3 px-4 bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.5)] rounded-lg text-center font-medium transition-all"
+                                                            whileHover={{ 
+                                                                backgroundColor: "rgba(13,158,216,0.2)",
+                                                                boxShadow: "0 0 15px rgba(13,158,216,0.3)"
+                                                            }}
+                                                        >
+                                                            Visitar sitio
+                                                        </motion.a>
+                                                        
+                                                        {proyecto.githubLink && (
+                                                            <motion.a
+                                                                href={proyecto.githubLink}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="py-3 px-4 bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.5)] rounded-lg flex items-center justify-center transition-all"
+                                                                whileHover={{ 
+                                                                    backgroundColor: "rgba(13,158,216,0.2)",
+                                                                    boxShadow: "0 0 15px rgba(13,158,216,0.3)"
+                                                                }}
+                                                            >
+                                                                <img src={iconGithub} alt="GitHub" className="h-6" />
+                                                            </motion.a>
+                                                        )}
+                                                    </motion.div>
                                                 </motion.div>
-                                                <motion.div className="flex-1 overflow-y-auto">
-                                                    <motion.h2 className="text-2xl">
+                                                
+                                                <motion.div 
+                                                    className="flex-1 overflow-y-auto pr-2 custom-scrollbar"
+                                                    variants={modalContentVariants}
+                                                >
+                                                    <motion.h2 
+                                                        className="text-3xl font-bold text-[var(--primary)] mb-4 text-center md:text-left"
+                                                        variants={modalContentVariants}
+                                                    >
                                                         {proyecto.titulo}
                                                     </motion.h2>
-                                                    <motion.p className="whitespace-pre-wrap">
-                                                        {proyecto.descripcion2}
-                                                    </motion.p>
+                                                    
+                                                    <motion.div 
+                                                        className="whitespace-pre-wrap text-gray-300 leading-relaxed"
+                                                        variants={modalContentVariants}
+                                                    >
+                                                        {proyecto.descripcion2.split('\n\n').map((paragraph, i) => (
+                                                            <p key={i} className="mb-4">{paragraph}</p>
+                                                        ))}
+                                                    </motion.div>
                                                 </motion.div>
-                                                <a
-                                                    className="w-6 h-6 absolute right-2 top-1"
-                                                    onClick={() => {
-                                                        setSelectedId(null);
+                                                
+                                                <motion.button
+                                                    className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(13,158,216,0.1)] border border-[rgba(13,158,216,0.3)]"
+                                                    onClick={() => setSelectedId(null)}
+                                                    whileHover={{ 
+                                                        scale: 1.1,
+                                                        backgroundColor: "rgba(13,158,216,0.2)"
                                                     }}
+                                                    variants={modalContentVariants}
                                                 >
-                                                    <img src={Close} />
-                                                </a>
+                                                    <img src={Close} className="w-5 h-5" />
+                                                </motion.button>
                                             </div>
                                         );
                                     }
                                     return null;
                                 })}
                             </motion.div>
-                        </>
-                    )}
-                </AnimatePresence>
-            </div>
-        </>
+                        </div>
+                    </>
+                )}
+            </AnimatePresence>
+        </motion.section>
     );
 }
 
