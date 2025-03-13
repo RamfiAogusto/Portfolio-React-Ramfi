@@ -2,28 +2,7 @@ import React from "react";
 import GroupButons from "../GroupButons";
 import imgPerfil from "../../assets/recorted.png";
 import { motion } from "framer-motion";
-import iconBootstrap from "../../assets/skills/bootstrap (4).svg";
-import iconCss from "../../assets/skills/CSS.png";
-import iconExpress from "../../assets/skills/expressjs_dark.svg";
-import iconFigma from "../../assets/skills/figma.png";
-import iconGit from "../../assets/skills/Git.png";
-import iconGithub from "../../assets/skills/GitHub.png";
-import iconHtml from "../../assets/skills/HTML.png";
-import iconJavascript from "../../assets/skills/Javascript.png";
-import iconMysql from "../../assets/skills/MySQL.png";
-import iconNodejs from "../../assets/skills/NodeJS.png";
-import iconPhp from "../../assets/skills/PHP.png";
-import iconPython from "../../assets/skills/Python.png";
-import iconReact from "../../assets/skills/ReactJS.png";
-import iconReactRouter from "../../assets/skills/reactrouter.svg";
-import iconSql from "../../assets/skills/sql.png";
-import iconTailwind from "../../assets/skills/TailwindCSS.png";
-import iconTerminal from "../../assets/skills/terminal.png";
-import iconVercel from "../../assets/skills/vercel_dark.svg";
-import iconWordpress from "../../assets/skills/wordpress.svg";
-import iconVscode from "../../assets/skills/vscode.png";
-import iconElementor from "../../assets/skills/elementor.svg";
-import iconSupabase from "../../assets/skills/supabase.svg";
+
 
 
 function Hero() {
