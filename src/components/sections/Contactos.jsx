@@ -74,7 +74,7 @@ function Contactos() {
                     <div className="contactos">
                         <h2 className="text-3xl">Redes</h2>
                         <div className="redes al-frente flex gap-4 ">
-                            <a
+                            {/* <a
                                 href="https://www.instagram.com/ramfi_aog/"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -85,7 +85,7 @@ function Contactos() {
                                     alt="icono instagram"
                                     className="w-8 h-8 hover:filter hover:invert-[76%]"
                                 />
-                            </a>
+                            </a> */}
                             <a
                                 href="https://www.linkedin.com/in/ramfi-aogusto-de-la-cruz-geraldino-aa64b5272"
                                 target="_blank"
