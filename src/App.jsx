@@ -18,18 +18,22 @@ function App() {
         <div style={backgroundStyle} className="relative w-full min-h-screen">
             <div id="sombra">
                 <AnimatedCursor
-                    outerSize={20}
+                    innerSize={8}
+                    outerSize={35}
                     color="13, 158, 216"
-                    outerAlpha={0.2}
+                    outerAlpha={0.3}
                     innerScale={0.7}
-                    outerScale={2.2}
+                    outerScale={1.5}
+                    trailingSpeed={8}
                     outerStyle={{
-                        width: "0",
-                        height: "0",
-                        border: "1px solid var(--primary)",
-                        boxShadow:
-                            "1px 1px 100px 80px rgba(13, 158, 216, 0.767)",
-                        zIndex: "0",
+                        border: "2px solid var(--primary)",
+                        mixBlendMode: "exclusion",
+                        boxShadow: "0 0 15px 2px rgba(13, 158, 216, 0.4)",
+                        zIndex: "999999",
+                    }}
+                    innerStyle={{
+                        backgroundColor: "var(--primary)",
+                        mixBlendMode: "exclusion",
                     }}
                     clickables={[
                         "a",
@@ -48,11 +52,15 @@ function App() {
                             target: ".custom",
                             options: {
                                 innerSize: 12,
-                                outerSize: 12,
+                                outerSize: 45,
                                 color: "255, 255, 255",
-                                outerAlpha: 0.3,
+                                outerAlpha: 0.4,
                                 innerScale: 0.7,
-                                outerScale: 5,
+                                outerScale: 2,
+                                outerStyle: {
+                                    border: "2px solid rgba(255, 255, 255, 0.8)",
+                                    boxShadow: "0 0 20px 2px rgba(255, 255, 255, 0.3)",
+                                }
                             },
                         },
                     ]}
