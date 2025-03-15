@@ -76,7 +76,7 @@ function Quiensoy() {
               {skills.map((skill, index) => (
                 <motion.span
                   key={index}
-                  className={`${skill.class} inline-block px-3 py-1 rounded-full text-sm bg-opacity-20 bg-[var(--backgroundsec)] border border-[var(--primary)] border-opacity-30 cursor-pointer`}
+                  className={`${skill.class} inline-block px-3 py-1 rounded-full text-sm bg-opacity-20 bg-black border border-[var(--primary)] border-opacity-30 cursor-pointer`}
                   custom={index}
                   initial="hidden"
                   whileInView="visible"
@@ -85,7 +85,7 @@ function Quiensoy() {
                   whileHover={{ 
                     scale: 1.1, 
                     backgroundColor: "var(--primary)", 
-                    color: "var(--background)",
+                    color: "black",
                     transition: { duration: 0.2 } 
                   }}
                 >

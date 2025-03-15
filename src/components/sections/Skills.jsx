@@ -23,6 +23,7 @@ import iconVscode from "../../assets/skills/vscode.png";
 import TitleSection from "../TitleSection";
 import iconElementor from "../../assets/skills/elementor.svg";
 import iconSupabase from "../../assets/skills/supabase.svg";
+import iconMongo from "../../assets/skills/mongodb.svg";
 
 import { motion } from "framer-motion";
 
@@ -112,6 +113,11 @@ function Skills() {
                                 <p className="skill_name">MySQL</p>
                             </li>
                             <li>
+                                <img src={iconMongo} className="skill_img" />
+                                <p className="skill_name">MongoDB</p>
+                            </li>
+                            
+                            <li>
                                 <img src={iconSupabase} className="skill_img" />
                                 <p className="skill_name">Supabase</p>
                             </li>
@@ -123,6 +129,7 @@ function Skills() {
                                 <img src={iconPython} className="skill_img" />
                                 <p className="skill_name">Python</p>
                             </li>
+
                         </ul>
                     </div>
                     <div className="card_skill skills_otros">
