@@ -35,7 +35,7 @@ function Experiencia() {
       periodo: "2024 - Actualidad",
       empresa: "Dentsu Dominicana",
       puesto: "Desarrollador Web",
-      descripcion: "En mi rol actual, he trabajado en el desarrollo de aplicaciones web con React.js, WordPress y Tailwind CSS. Implementé soluciones dinámicas utilizando React Hooks y programación reactiva, además de integrar la API de Google Maps en proyectos de Single-page Applications (SPA). Desarrollé y personalicé sitios web con Elementor, optimizando la experiencia de usuario y el diseño responsivo. También realicé pruebas de API, contribuyendo al éxito de proyectos digitales innovadores."
+      descripcion: "Desarrollo landing pages, sitios web corporativos y aplicaciones internas con React.js, Tailwind CSS, MongoDB, WordPress y Elementor. Implementé formularios dinámicos que adaptan preguntas según los servicios seleccionados, almacenan datos en MongoDB y generan reportes en PDF. Trabajo en equipo usando Git/GitHub y metodologías ágiles."
     },
     {
       periodo: "2023-2024",
