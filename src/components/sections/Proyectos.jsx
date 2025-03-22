@@ -21,7 +21,8 @@ import iconTailwind from "../../assets/skills/TailwindCSS.png";
 import iconBootstrap from "../../assets/skills/bootstrap (4).svg";
 import iconApi from "../../assets/skills/api.png";
 import iconGit from "../../assets/skills/Git.png";
-
+import iconVite from "../../assets/skills/vite.svg";
+import JsonVisualizer from "../../assets/proyectos/Json.png";
 function Proyectos() {
     const [selectedId, setSelectedId] = useState(null);
     const containerRef = useRef(null);
@@ -104,6 +105,27 @@ function Proyectos() {
     const proyectos = [
         {
             id: 1,
+            titulo: "JSON Visualizador",
+            descripcion:
+                "Una herramienta moderna e interactiva para visualizar y editar estructuras JSON de manera intuitiva. Transforma datos JSON complejos en diagramas visuales.",
+            descripcion2:
+                `JSON Visualizador es una aplicación web que permite a los desarrolladores trabajar con estructuras JSON de manera visual e interactiva. El proyecto fue desarrollado con React y Vite, utilizando TailwindCSS para el diseño de la interfaz.
+
+Entre sus características principales destacan:
+- Editor de código avanzado con resaltado de sintaxis y autocompletado
+- Visualización de diagramas que representan gráficamente la estructura JSON
+- Validación en tiempo real del código JSON
+- Funcionalidad de importación y exportación de archivos
+- Diseño completamente responsive para todos los dispositivos
+
+Este proyecto demuestra mis habilidades en el desarrollo de herramientas para desarrolladores, con un enfoque en la creación de interfaces intuitivas que mejoran el flujo de trabajo.`,
+            img: JsonVisualizer,
+            skills: [iconReact, iconTailwind, iconJavascript, iconNodejs, iconVite || iconReact],
+            githubLink: "https://github.com/RamfiAogusto/JsonVisualizer",
+            siteLink: "https://json-visualizador.vercel.app/",
+        },
+        {
+            id: 2,
             titulo: "Restaurant Vic",
             descripcion:
                 "Un sitio web de Un restaurante creado con react, incluye un menu y categorias de los platos",
@@ -115,7 +137,7 @@ function Proyectos() {
             siteLink: "https://restaurant-vic.vercel.app/",
         },
         {
-            id: 2,
+            id: 3,
             titulo: "D'Rafa Peluquería",
             descripcion:
                 "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
@@ -133,7 +155,7 @@ function Proyectos() {
             siteLink: "https://drafapeluqueria.vercel.app/",
         },
         {
-            id: 3,
+            id: 4,
             titulo: "Migración de tecnología",
             descripcion:
                 "En este proyecto realizo la Migracion de mi portafolio de los lenguajes HTML, CSS y JavaScript a React.",
@@ -151,7 +173,7 @@ function Proyectos() {
             siteLink: "/",
         },
         {
-            id: 4,
+            id: 5,
             titulo: "Shorten API",
             descripcion:
                 "Shorten es un challenge de frontendmentor, Consiste en una pagina responsiva que permite cortar enlaces con el uso de una API y guardar el historial de los enlaces acortados.",
@@ -172,7 +194,7 @@ function Proyectos() {
                 "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
         },
         {
-            id: 5,
+            id: 6,
             titulo: "Hoster Starter",
             descripcion:
                 "Este proyecto es una landing page sencilla que ofrece el servicio de hosting.",
