@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Proyecto from "../Proyecto";
 import TitleSection from "../TitleSection";
-import drafa from "../../assets/proyectos/drafapeluqueria.jpg";
+import drafa from "../../assets/proyectos/drafapeluqueria.png";
 import Burger from "../../assets/proyectos/Burger.jpg";
 import Shorten from "../../assets/proyectos/shorten.jpg";
 import Hoster from "../../assets/proyectos/hosterStarter.jpg";
@@ -122,7 +122,7 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
             img: JsonVisualizer,
             skills: [iconReact, iconTailwind, iconJavascript, iconNodejs, iconVite || iconReact],
             githubLink: "https://github.com/RamfiAogusto/JsonVisualizer",
-            siteLink: "https://json-visualizador.vercel.app/",
+            siteLink: "https://json-visualizer-three.vercel.app/",
         },
         {
             id: 2,
@@ -152,7 +152,7 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
                 iconReactRouter,
             ],
             githubLink: null,
-            siteLink: "https://drafapeluqueria.vercel.app/",
+            siteLink: "https://drafapeluqueria.com",
         },
         {
             id: 4,
