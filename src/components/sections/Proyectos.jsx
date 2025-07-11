@@ -105,6 +105,46 @@ function Proyectos() {
     const proyectos = [
         {
             id: 1,
+            titulo: "D'Rafa Peluquería",
+            descripcion:
+                "Sitio web corporativo completo para una peluquería. Proyecto Full Stack con enfoque en SEO local y conversión de visitantes.",
+            descripcion2: `## **Sitio Web para Peluquería - Proyecto Full Stack**
+
+Desarrollé un sitio web corporativo completo para un cliente del sector servicios. El proyecto incluyó desde el diseño hasta el deployment, con enfoque en SEO local y conversión de visitantes.
+
+**Stack técnico:**
+Next.js 15, React, TypeScript, TailwindCSS, Framer Motion
+
+**Funcionalidades implementadas:**
+- Landing page con animaciones y secciones interactivas
+- Sistema de formularios con validación (Formspree)
+- Galería responsiva con modal de imágenes
+- Integración WhatsApp para conversiones
+- SEO optimizado con structured data
+- Sistema de routing con múltiples páginas
+
+**Desafíos técnicos resueltos:**
+- Problemas de hidratación SSR/CSR
+- Optimización de animaciones para rendimiento
+- Configuración de build para deployment en Vercel
+- Implementación de schema markup para SEO local
+
+**Herramientas:**
+Vercel para deployment, GitHub para versionado, Formspree para formularios
+
+Un proyecto completo que me permitió trabajar con tecnologías modernas de React y resolver problemas reales de performance y SEO.`,
+            img: drafa,
+            skills: [
+                iconReact,
+                iconTailwind,
+                iconJavascript,
+                iconReactRouter,
+            ],
+            githubLink: null,
+            siteLink: "https://drafapeluqueria.com",
+        },
+        {
+            id: 2,
             titulo: "JSON Visualizador",
             descripcion:
                 "Una herramienta moderna e interactiva para visualizar y editar estructuras JSON de manera intuitiva. Transforma datos JSON complejos en diagramas visuales.",
@@ -125,7 +165,7 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
             siteLink: "https://json-visualizer-three.vercel.app/",
         },
         {
-            id: 2,
+            id: 3,
             titulo: "Restaurant Vic",
             descripcion:
                 "Un sitio web de Un restaurante creado con react, incluye un menu y categorias de los platos",
@@ -135,24 +175,6 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
             skills: [iconReact, iconTailwind, /* iconNodejs,  */iconReactRouter],
             githubLink: "https://github.com/RamfiAogusto/Restaurant-Vic",
             siteLink: "https://restaurant-vic.vercel.app/",
-        },
-        {
-            id: 3,
-            titulo: "D'Rafa Peluquería",
-            descripcion:
-                "Un sitio web de una peluquería en Santo Domingo creado con ReactJS, hace uso de react router para manejar las rutas",
-            descripcion2: `Este proyecto es un sitio web de multiples paginas con el propósito de promocionar los servicios de la peluquería "D'Rafa peluquería". En este proyecto utilice ReactJs para crear las interfaces de la pagina y React Router para obtener un enrutado dinámico en la pagina y un buen tiempo de respuesta al cambiar de pagina `,
-            img: drafa,
-            skills: [
-                iconHtml,
-                iconTailwind,
-                iconJavascript,
-                iconReact,
-                /* iconNodejs, */
-                iconReactRouter,
-            ],
-            githubLink: null,
-            siteLink: "https://drafapeluqueria.com",
         },
         {
             id: 4,
@@ -319,7 +341,7 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
                                         return (
                                             <div
                                                 key={proyecto.id}
-                                                className="flex relative flex-col md:flex-row gap-6 h-full max-h-[80vh] overflow-auto"
+                                                className="flex relative flex-col md:flex-row gap-6 h-full"
                                             >
                                                 <motion.div 
                                                     className="flex-none md:w-2/5 mx-auto md:mx-0 max-w-full"
@@ -394,7 +416,7 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
                                                 </motion.div>
                                                 
                                                 <motion.div 
-                                                    className="flex-1 overflow-y-auto pr-2 custom-scrollbar"
+                                                    className="flex-1 pr-2"
                                                     variants={modalContentVariants}
                                                 >
                                                     <motion.h2 
