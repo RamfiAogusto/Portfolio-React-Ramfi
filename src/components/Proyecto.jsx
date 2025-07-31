@@ -119,22 +119,24 @@ function Proyecto(props) {
                     </motion.button>
                 </motion.div>
                 
-                {/* Botón fijo siempre visible */}
+                {/* Overlay negro permanente en la parte inferior */}
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-20"></div>
+                
+                {/* Botón fijo en la parte inferior */}
                 <motion.button
                     onClick={handleVerMasClick}
-                    className="absolute bottom-4 right-4 bg-[rgba(13,158,216,0.9)] text-white border-2 border-[rgba(13,158,216,1)] rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-[rgba(13,158,216,1)] hover:scale-105 hover:shadow-lg backdrop-blur-sm z-10"
+                    className="absolute bottom-3 left-3 text-white text-sm font-medium transition-all duration-300 hover:text-[var(--primary)] z-30"
                     whileHover={{ 
                         scale: 1.05,
-                        boxShadow: "0 0 15px rgba(13, 158, 216, 0.5)"
+                        x: 5
                     }}
                     whileTap={{ scale: 0.95 }}
                 >
                     <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
                         Ver más
+                        <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                     </span>
                 </motion.button>
                 
