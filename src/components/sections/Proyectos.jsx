@@ -298,11 +298,9 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
                     {proyectos.map((proyecto, index) => (
                         <motion.div
                             key={proyecto.id}
-                            onClick={() => setSelectedId(proyecto.id)}
                             className="proyecto-wrapper w-full sm:w-[450px] md:w-[400px] lg:w-[350px]"
                             variants={containerVariants}
                             custom={index}
-                            whileHover={{ y: -10, transition: { duration: 0.3 } }}
                         >
                             <Proyecto
                                 titulo={proyecto.titulo}
@@ -311,6 +309,7 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
                                 githubLink={proyecto.githubLink}
                                 siteLink={proyecto.siteLink}
                                 img={proyecto.img}
+                                onVerMasClick={() => setSelectedId(proyecto.id)}
                             />
                         </motion.div>
                     ))}

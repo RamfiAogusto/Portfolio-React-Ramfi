@@ -82,6 +82,13 @@ function Proyecto(props) {
         }
     };
 
+    const handleVerMasClick = (e) => {
+        e.stopPropagation();
+        if (props.onVerMasClick) {
+            props.onVerMasClick();
+        }
+    };
+
     return (
         <motion.article
             className="proyecto-card"
@@ -92,9 +99,45 @@ function Proyecto(props) {
             viewport={{ once: true, margin: "-50px" }}
         >
             <div className="proyecto-image-container overflow-hidden rounded-lg relative">
-                <motion.div className="proyecto-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
-                    <span className="text-white text-sm font-medium">Ver detalles</span>
+                <motion.div className="proyecto-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20 opacity-0 hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                    <motion.button
+                        onClick={handleVerMasClick}
+                        className="bg-[rgba(13,158,216,0.95)] text-white border-2 border-[rgba(13,158,216,1)] rounded-xl px-8 py-4 text-base font-semibold transition-all duration-300 hover:bg-[rgba(13,158,216,1)] hover:scale-110 hover:shadow-2xl hover:shadow-[rgba(13,158,216,0.4)] backdrop-blur-sm"
+                        whileHover={{ 
+                            scale: 1.1,
+                            boxShadow: "0 0 30px rgba(13, 158, 216, 0.6)"
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        <span className="flex items-center gap-2">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                            Ver detalles completos
+                        </span>
+                    </motion.button>
                 </motion.div>
+                
+                {/* Botón fijo siempre visible */}
+                <motion.button
+                    onClick={handleVerMasClick}
+                    className="absolute bottom-4 right-4 bg-[rgba(13,158,216,0.9)] text-white border-2 border-[rgba(13,158,216,1)] rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-[rgba(13,158,216,1)] hover:scale-105 hover:shadow-lg backdrop-blur-sm z-10"
+                    whileHover={{ 
+                        scale: 1.05,
+                        boxShadow: "0 0 15px rgba(13, 158, 216, 0.5)"
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <span className="flex items-center gap-1">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        Ver más
+                    </span>
+                </motion.button>
+                
                 <motion.img 
                     className="preview_container object-cover w-full" 
                     src={props.img}
@@ -149,8 +192,9 @@ function Proyecto(props) {
                     variants={buttonVariants}
                     whileHover="hover"
                     className="site-button"
+                    onClick={(e) => e.stopPropagation()}
                 >
-                    Ir al sitio
+                    Ver demo
                 </motion.a>
                 
                 {props.githubLink && (
@@ -165,6 +209,7 @@ function Proyecto(props) {
                             transition: { duration: 0.2 }
                         }}
                         className="github-button"
+                        onClick={(e) => e.stopPropagation()}
                     >
                         <motion.img 
                             src={imgGithub} 
