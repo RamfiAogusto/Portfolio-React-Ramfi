@@ -8,6 +8,7 @@ import Shorten from "../../assets/proyectos/shorten.jpg";
 import Hoster from "../../assets/proyectos/hosterStarter.jpg";
 import Migracion from "../../assets/proyectos/Migracion.jpg";
 import RestaurantVic from "../../assets/proyectos/restaurant-vic.png";
+import ReservasBarberia from "../../assets/proyectos/ReservasBarberia.png";
 import Close from "../../assets/icons/close-circle-svgrepo-com.svg";
 // Importar iconos
 import iconCss from "../../assets/skills/CSS.png";
@@ -112,14 +113,14 @@ function Proyectos() {
             titulo: "Sistema de Reservas para Barberías",
             descripcion:
                 "Aplicación web completa para gestionar citas y reservas de barberías. Incluye panel de administración, perfil público y sistema de pagos integrado.",
-            descripcion2: `## **💈 Sistema de Reservas para Barberías - Proyecto Full Stack**
+            descripcion2: `💈 Sistema de Reservas para Barberías - Proyecto Full Stack
 
-**ReservasBarber** es una aplicación web completa desarrollada para gestionar citas y reservas de barberías de manera profesional. El sistema incluye tanto un panel de administración para los propietarios como un perfil público donde los clientes pueden ver servicios y realizar reservas directamente.
+ReservasBarber es una aplicación web completa desarrollada para gestionar citas y reservas de barberías de manera profesional. El sistema incluye tanto un panel de administración para los propietarios como un perfil público donde los clientes pueden ver servicios y realizar reservas directamente.
 
-**Stack técnico:**
+Stack técnico:
 Next.js 14, React 18, TypeScript, TailwindCSS, Node.js, Express.js, PostgreSQL, Prisma ORM, Stripe, Resend, Cloudinary
 
-**Funcionalidades implementadas:**
+Funcionalidades implementadas:
 - Perfil público personalizado con URL única (ej: /ramfi_aog)
 - Sistema de reservas avanzado con calendario inteligente
 - Gestión de horarios por día con excepciones y descansos
@@ -129,25 +130,25 @@ Next.js 14, React 18, TypeScript, TailwindCSS, Node.js, Express.js, PostgreSQL, 
 - Panel de administración con dashboard y estadísticas
 - Gestión de servicios con precios, duraciones y depósitos
 
-**Desafíos técnicos resueltos:**
+Desafíos técnicos resueltos:
 - Gestión compleja de horarios variables y excepciones
 - Verificación de disponibilidad en tiempo real
 - Optimización de imágenes con lazy loading y CDN
 - Integración segura de pagos con webhooks
 - Sistema de colas para tareas pesadas con BullMQ
 
-**Características avanzadas:**
+Características avanzadas:
 - Caché inteligente para datos del salón
 - Rate limiting y seguridad con Helmet
 - Múltiples zonas horarias soportadas
 - Backup automático de datos
 - Logs detallados para debugging
 
-**Herramientas:**
+Herramientas:
 Vercel para frontend, Railway para backend, PostgreSQL para base de datos, Redis para colas, Cloudinary para imágenes
 
 Un proyecto completo que demuestra la capacidad de desarrollar soluciones escalables desde el análisis de requerimientos hasta el deploy en producción.`,
-            img: drafa, // Temporal, necesitarás agregar la imagen del proyecto
+            img: ReservasBarberia,
             skills: [
                 iconReact,
                 iconTailwind,
@@ -165,14 +166,14 @@ Un proyecto completo que demuestra la capacidad de desarrollar soluciones escala
             titulo: "D'Rafa Peluquería",
             descripcion:
                 "Sitio web corporativo completo para una peluquería. Proyecto Full Stack con enfoque en SEO local y conversión de visitantes.",
-            descripcion2: `## **Sitio Web para Peluquería - Proyecto Full Stack**
+            descripcion2: `Sitio Web para Peluquería - Proyecto Full Stack
 
 Desarrollé un sitio web corporativo completo para un cliente del sector servicios. El proyecto incluyó desde el diseño hasta el deployment, con enfoque en SEO local y conversión de visitantes.
 
-**Stack técnico:**
+Stack técnico:
 Next.js 15, React, TypeScript, TailwindCSS, Framer Motion
 
-**Funcionalidades implementadas:**
+Funcionalidades implementadas:
 - Landing page con animaciones y secciones interactivas
 - Sistema de formularios con validación (Formspree)
 - Galería responsiva con modal de imágenes
@@ -180,13 +181,13 @@ Next.js 15, React, TypeScript, TailwindCSS, Framer Motion
 - SEO optimizado con structured data
 - Sistema de routing con múltiples páginas
 
-**Desafíos técnicos resueltos:**
+Desafíos técnicos resueltos:
 - Problemas de hidratación SSR/CSR
 - Optimización de animaciones para rendimiento
 - Configuración de build para deployment en Vercel
 - Implementación de schema markup para SEO local
 
-**Herramientas:**
+Herramientas:
 Vercel para deployment, GitHub para versionado, Formspree para formularios
 
 Un proyecto completo que me permitió trabajar con tecnologías modernas de React y resolver problemas reales de performance y SEO.`,
@@ -227,7 +228,11 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
             descripcion:
                 "Un sitio web de Un restaurante creado con react, incluye un menu y categorias de los platos",
             descripcion2:
-                `"Restaurant Vic" es un proyecto web desarrollado individualmente en el transcurso de tres dias. El objetivo principal fue crear una plataforma en línea para presentar un restaurante y su menú, organizado por categorías, con el fin de atraer a los clientes y permitirles explorar los platos disponibles. \n\nComo desarrollador único del proyecto, fui responsable de todos los aspectos del desarrollo, desde la conceptualización hasta la implementación final. Utilicé React.js como framework principal, aprovechando sus capacidades para crear una interfaz de usuario dinámica y responsive. \n\nTailwind CSS se empleó para estilizar la aplicación de manera eficiente, mientras que React Router se utilizó para la navegación entre las diferentes secciones del sitio El proyecto demuestra habilidades en el desarrollo front-end, con un enfoque en la creación de interfaces de usuario atractivas y funcionales para el sector de la restauración.`,
+                `"Restaurant Vic" es un proyecto web desarrollado individualmente en el transcurso de tres dias. El objetivo principal fue crear una plataforma en línea para presentar un restaurante y su menú, organizado por categorías, con el fin de atraer a los clientes y permitirles explorar los platos disponibles.
+
+Como desarrollador único del proyecto, fui responsable de todos los aspectos del desarrollo, desde la conceptualización hasta la implementación final. Utilicé React.js como framework principal, aprovechando sus capacidades para crear una interfaz de usuario dinámica y responsive.
+
+Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mientras que React Router se utilizó para la navegación entre las diferentes secciones del sitio. El proyecto demuestra habilidades en el desarrollo front-end, con un enfoque en la creación de interfaces de usuario atractivas y funcionales para el sector de la restauración.`,
             img: RestaurantVic,
             skills: [iconReact, iconTailwind, /* iconNodejs,  */iconReactRouter],
             githubLink: "https://github.com/RamfiAogusto/Restaurant-Vic",
