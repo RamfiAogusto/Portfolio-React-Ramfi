@@ -23,6 +23,10 @@ import iconApi from "../../assets/skills/api.png";
 import iconGit from "../../assets/skills/Git.png";
 import iconVite from "../../assets/skills/vite.svg";
 import JsonVisualizer from "../../assets/proyectos/Json.png";
+import iconExpressjs from "../../assets/skills/expressjs_dark.svg";
+import iconTypescript from "../../assets/skills/typescript.svg";
+import iconPostgresql from "../../assets/skills/postgresql.svg";
+
 function Proyectos() {
     const [selectedId, setSelectedId] = useState(null);
     const containerRef = useRef(null);
@@ -105,6 +109,59 @@ function Proyectos() {
     const proyectos = [
         {
             id: 1,
+            titulo: "Sistema de Reservas para Barberías",
+            descripcion:
+                "Aplicación web completa para gestionar citas y reservas de barberías. Incluye panel de administración, perfil público y sistema de pagos integrado.",
+            descripcion2: `## **💈 Sistema de Reservas para Barberías - Proyecto Full Stack**
+
+**ReservasBarber** es una aplicación web completa desarrollada para gestionar citas y reservas de barberías de manera profesional. El sistema incluye tanto un panel de administración para los propietarios como un perfil público donde los clientes pueden ver servicios y realizar reservas directamente.
+
+**Stack técnico:**
+Next.js 14, React 18, TypeScript, TailwindCSS, Node.js, Express.js, PostgreSQL, Prisma ORM, Stripe, Resend, Cloudinary
+
+**Funcionalidades implementadas:**
+- Perfil público personalizado con URL única (ej: /ramfi_aog)
+- Sistema de reservas avanzado con calendario inteligente
+- Gestión de horarios por día con excepciones y descansos
+- Integración completa con Stripe para pagos online
+- Sistema de notificaciones automáticas con Resend
+- Galería de imágenes con categorización y optimización
+- Panel de administración con dashboard y estadísticas
+- Gestión de servicios con precios, duraciones y depósitos
+
+**Desafíos técnicos resueltos:**
+- Gestión compleja de horarios variables y excepciones
+- Verificación de disponibilidad en tiempo real
+- Optimización de imágenes con lazy loading y CDN
+- Integración segura de pagos con webhooks
+- Sistema de colas para tareas pesadas con BullMQ
+
+**Características avanzadas:**
+- Caché inteligente para datos del salón
+- Rate limiting y seguridad con Helmet
+- Múltiples zonas horarias soportadas
+- Backup automático de datos
+- Logs detallados para debugging
+
+**Herramientas:**
+Vercel para frontend, Railway para backend, PostgreSQL para base de datos, Redis para colas, Cloudinary para imágenes
+
+Un proyecto completo que demuestra la capacidad de desarrollar soluciones escalables desde el análisis de requerimientos hasta el deploy en producción.`,
+            img: drafa, // Temporal, necesitarás agregar la imagen del proyecto
+            skills: [
+                iconReact,
+                iconTailwind,
+                iconJavascript,
+                iconNodejs,
+                iconExpressjs, // Para Express.js
+                iconTypescript, // Para TypeScript
+                iconPostgresql, // Para PostgreSQL
+            ],
+            githubLink: null, // Sin botón de GitHub
+            siteLink: "https://reservas-barberia-ruddy.vercel.app",
+        },
+        {
+            id: 2,
             titulo: "D'Rafa Peluquería",
             descripcion:
                 "Sitio web corporativo completo para una peluquería. Proyecto Full Stack con enfoque en SEO local y conversión de visitantes.",
@@ -144,7 +201,7 @@ Un proyecto completo que me permitió trabajar con tecnologías modernas de Reac
             siteLink: "https://drafapeluqueria.com",
         },
         {
-            id: 2,
+            id: 3,
             titulo: "JSON Visualizador",
             descripcion:
                 "Una herramienta moderna e interactiva para visualizar y editar estructuras JSON de manera intuitiva. Transforma datos JSON complejos en diagramas visuales.",
@@ -165,7 +222,7 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
             siteLink: "https://json-visualizer-three.vercel.app/",
         },
         {
-            id: 3,
+            id: 4,
             titulo: "Restaurant Vic",
             descripcion:
                 "Un sitio web de Un restaurante creado con react, incluye un menu y categorias de los platos",
@@ -175,24 +232,6 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
             skills: [iconReact, iconTailwind, /* iconNodejs,  */iconReactRouter],
             githubLink: "https://github.com/RamfiAogusto/Restaurant-Vic",
             siteLink: "https://restaurant-vic.vercel.app/",
-        },
-        {
-            id: 4,
-            titulo: "Migración de tecnología",
-            descripcion:
-                "En este proyecto realizo la Migracion de mi portafolio de los lenguajes HTML, CSS y JavaScript a React.",
-            descripcion2:
-                "En este proyecto realizo la Migracion de mi portafolio de los lenguajes HTML, CSS y JavaScript a React, Con el objetivo de facilitar el mantenimiento del portafolio al dividirlo en componentes y utilizar multiples herramientas que proporciona React y la comunidad para hacer mi portafolio mas atractivo visualmente y que sea mas fácil de mantener.",
-            img: Migracion,
-            skills: [
-                iconHtml,
-                iconTailwind,
-                iconJavascript,
-                iconReact,
-                /* iconNodejs, */
-            ],
-            githubLink: "https://github.com/RamfiAogusto/Portfolio-React-Ramfi",
-            siteLink: "/",
         },
         {
             id: 5,
