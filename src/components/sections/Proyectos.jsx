@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Proyecto from "../Proyecto";
 import TitleSection from "../TitleSection";
@@ -30,7 +30,11 @@ import iconPostgresql from "../../assets/skills/postgresql.svg";
 
 function Proyectos() {
     const [selectedId, setSelectedId] = useState(null);
+    const [currentCategory, setCurrentCategory] = useState("todos");
+    const [currentPage, setCurrentPage] = useState(1);
     const containerRef = useRef(null);
+
+    const ITEMS_PER_PAGE = 6;
 
     // Variantes para animaciones
     const sectionVariants = {
@@ -59,12 +63,26 @@ function Proyectos() {
     };
 
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
+            y: 0,
             transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.2
+                duration: 0.4,
+                ease: "easeOut"
+            }
+        }
+    };
+
+    const filterVariants = {
+        hidden: { opacity: 0, y: -20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 10
             }
         }
     };
@@ -111,6 +129,7 @@ function Proyectos() {
         {
             id: 1,
             titulo: "Sistema de Reservas para Barberías",
+            categoria: "fullstack",
             descripcion:
                 "Aplicación web completa para gestionar citas y reservas de barberías. Incluye panel de administración, perfil público y sistema de pagos integrado.",
             descripcion2: `💈 Sistema de Reservas para Barberías - Proyecto Full Stack
@@ -154,16 +173,17 @@ Un proyecto completo que demuestra la capacidad de desarrollar soluciones escala
                 iconTailwind,
                 iconJavascript,
                 iconNodejs,
-                iconExpressjs, // Para Express.js
-                iconTypescript, // Para TypeScript
-                iconPostgresql, // Para PostgreSQL
+                iconExpressjs,
+                iconTypescript,
+                iconPostgresql,
             ],
-            githubLink: null, // Sin botón de GitHub
+            githubLink: null,
             siteLink: "https://reservas-barberia-ruddy.vercel.app",
         },
         {
             id: 2,
             titulo: "D'Rafa Peluquería",
+            categoria: "fullstack",
             descripcion:
                 "Sitio web corporativo completo para una peluquería. Proyecto Full Stack con enfoque en SEO local y conversión de visitantes.",
             descripcion2: `Sitio Web para Peluquería - Proyecto Full Stack
@@ -204,6 +224,7 @@ Un proyecto completo que me permitió trabajar con tecnologías modernas de Reac
         {
             id: 3,
             titulo: "JSON Visualizador",
+            categoria: "frontend",
             descripcion:
                 "Una herramienta moderna e interactiva para visualizar y editar estructuras JSON de manera intuitiva. Transforma datos JSON complejos en diagramas visuales.",
             descripcion2:
@@ -225,6 +246,7 @@ Este proyecto demuestra mis habilidades en el desarrollo de herramientas para de
         {
             id: 4,
             titulo: "Restaurant Vic",
+            categoria: "frontend",
             descripcion:
                 "Un sitio web de Un restaurante creado con react, incluye un menu y categorias de los platos",
             descripcion2:
@@ -234,13 +256,14 @@ Como desarrollador único del proyecto, fui responsable de todos los aspectos de
 
 Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mientras que React Router se utilizó para la navegación entre las diferentes secciones del sitio. El proyecto demuestra habilidades en el desarrollo front-end, con un enfoque en la creación de interfaces de usuario atractivas y funcionales para el sector de la restauración.`,
             img: RestaurantVic,
-            skills: [iconReact, iconTailwind, /* iconNodejs,  */iconReactRouter],
+            skills: [iconReact, iconTailwind, iconReactRouter],
             githubLink: "https://github.com/RamfiAogusto/Restaurant-Vic",
             siteLink: "https://restaurant-vic.vercel.app/",
         },
         {
             id: 5,
             titulo: "Shorten API",
+            categoria: "frontend",
             descripcion:
                 "Shorten es un challenge de frontendmentor, Consiste en una pagina responsiva que permite cortar enlaces con el uso de una API y guardar el historial de los enlaces acortados.",
             descripcion2:
@@ -262,6 +285,7 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
         {
             id: 6,
             titulo: "Hoster Starter",
+            categoria: "frontend",
             descripcion:
                 "Este proyecto es una landing page sencilla que ofrece el servicio de hosting.",
             descripcion2:
@@ -273,7 +297,35 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
             siteLink:
                 "https://ramfiaogusto.github.io/Hoster-Starter.github.io/",
         },
+        
     ];
+
+    // Categorías disponibles
+    const categorias = [
+        { id: "todos", nombre: "Todos", icon: "📁" },
+        { id: "fullstack", nombre: "Full Stack", icon: "⚡" },
+        { id: "frontend", nombre: "Frontend", icon: "🎨" },
+    ];
+
+    // Filtrar proyectos por categoría
+    const proyectosFiltrados = useMemo(() => {
+        if (currentCategory === "todos") {
+            return proyectos;
+        }
+        return proyectos.filter(proyecto => proyecto.categoria === currentCategory);
+    }, [currentCategory]);
+
+    // Calcular paginación
+    const totalPages = Math.ceil(proyectosFiltrados.length / ITEMS_PER_PAGE);
+    const proyectosPaginados = proyectosFiltrados.slice(
+        (currentPage - 1) * ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE
+    );
+
+    // Resetear página cuando cambia la categoría
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [currentCategory]);
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -290,6 +342,22 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, [containerRef]);
+
+    const handleCategoryChange = (categoria) => {
+        setCurrentCategory(categoria);
+    };
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+        // Scroll suave hacia la sección de proyectos
+        const proyectosSection = document.getElementById('proyectos');
+        if (proyectosSection) {
+            proyectosSection.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
+    };
 
     return (
         <motion.section
@@ -334,17 +402,58 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
                 <motion.div variants={titleVariants} className="mb-12">
                     <TitleSection>Últimos proyectos</TitleSection>
                 </motion.div>
+
+                {/* Filtros de categorías */}
+                <motion.div 
+                    className="mb-8"
+                    variants={filterVariants}
+                >
+                    <div className="flex flex-wrap justify-center gap-3">
+                        {categorias.map((categoria) => (
+                            <motion.button
+                                key={categoria.id}
+                                onClick={() => handleCategoryChange(categoria.id)}
+                                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                                    currentCategory === categoria.id
+                                        ? "bg-[var(--primary)] text-black shadow-lg shadow-[var(--primary)]/30"
+                                        : "bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.3)] hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.5)]"
+                                }`}
+                                whileHover={{ 
+                                    scale: 1.05,
+                                    transition: { duration: 0.2 }
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <span className="text-lg">{categoria.icon}</span>
+                                <span>{categoria.nombre}</span>
+                                <span className="text-xs opacity-70">
+                                    ({proyectos.filter(p => categoria.id === "todos" ? true : p.categoria === categoria.id).length})
+                                </span>
+                            </motion.button>
+                        ))}
+                    </div>
+                </motion.div>
                 
+                {/* Grid de proyectos */}
                 <motion.div 
                     className="flex flex-wrap justify-center gap-8"
-                    variants={containerVariants}
+                    key={`${currentCategory}-${currentPage}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                    {proyectos.map((proyecto, index) => (
+                    {proyectosPaginados.map((proyecto, index) => (
                         <motion.div
                             key={proyecto.id}
                             className="proyecto-wrapper w-full sm:w-[450px] md:w-[400px] lg:w-[350px]"
-                            variants={containerVariants}
-                            custom={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ 
+                                duration: 0.4, 
+                                delay: index * 0.1,
+                                ease: "easeOut"
+                            }}
                         >
                             <Proyecto
                                 titulo={proyecto.titulo}
@@ -358,6 +467,76 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
                         </motion.div>
                     ))}
                 </motion.div>
+
+                {/* Paginación */}
+                {totalPages > 1 && (
+                    <motion.div 
+                        className="mt-12 flex justify-center"
+                        key={`pagination-${currentCategory}-${currentPage}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
+                    >
+                        <div className="flex items-center gap-2 bg-[rgba(4,7,10,0.8)] border border-[rgba(13,158,216,0.2)] rounded-full p-2">
+                            {/* Botón Anterior */}
+                            <motion.button
+                                onClick={() => handlePageChange(currentPage - 1)}
+                                disabled={currentPage === 1}
+                                className={`px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-2 ${
+                                    currentPage === 1
+                                        ? "opacity-50 cursor-not-allowed"
+                                        : "hover:bg-[rgba(13,158,216,0.1)] hover:text-[var(--primary)]"
+                                }`}
+                                whileHover={currentPage !== 1 ? { scale: 1.05 } : {}}
+                                whileTap={currentPage !== 1 ? { scale: 0.95 } : {}}
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                                Anterior
+                            </motion.button>
+
+                            {/* Números de página */}
+                            <div className="flex gap-1">
+                                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                                    <motion.button
+                                        key={page}
+                                        onClick={() => handlePageChange(page)}
+                                        className={`w-10 h-10 rounded-full font-medium transition-all duration-200 ${
+                                            currentPage === page
+                                                ? "bg-[var(--primary)] text-black"
+                                                : "hover:bg-[rgba(13,158,216,0.1)] hover:text-[var(--primary)]"
+                                        }`}
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        {page}
+                                    </motion.button>
+                                ))}
+                            </div>
+
+                            {/* Botón Siguiente */}
+                            <motion.button
+                                onClick={() => handlePageChange(currentPage + 1)}
+                                disabled={currentPage === totalPages}
+                                className={`px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-2 ${
+                                    currentPage === totalPages
+                                        ? "opacity-50 cursor-not-allowed"
+                                        : "hover:bg-[rgba(13,158,216,0.1)] hover:text-[var(--primary)]"
+                                }`}
+                                whileHover={currentPage !== totalPages ? { scale: 1.05 } : {}}
+                                whileTap={currentPage !== totalPages ? { scale: 0.95 } : {}}
+                            >
+                                Siguiente
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </motion.button>
+                        </div>
+                    </motion.div>
+                )}
+
+
             </div>
 
             <AnimatePresence>
