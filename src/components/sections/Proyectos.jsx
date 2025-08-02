@@ -269,9 +269,9 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
             img: Hoster,
             skills: [iconHtml, iconCss, iconJavascript, iconGit, iconGithub],
             githubLink:
-                "https://github.com/RamfiAogusto/url-shortening-api-master.github.io",
+                "https://github.com/RamfiAogusto/hoster-starter",
             siteLink:
-                "https://ramfiaogusto.github.io/url-shortening-api-master.github.io/",
+                "https://ramfiaogusto.github.io/Hoster-Starter.github.io/",
         },
     ];
 

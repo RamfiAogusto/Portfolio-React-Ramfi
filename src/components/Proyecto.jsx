@@ -81,8 +81,8 @@ const Proyecto = memo(function Proyecto(props) {
         >
             {/* Contenedor de imagen optimizado */}
             <div className="proyecto-image-container overflow-hidden rounded-xl relative mb-4">
-                {/* Overlay negro permanente */}
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/85 via-black/50 to-transparent pointer-events-none z-10" aria-hidden="true"></div>
+                {/* Overlay negro permanente - más oscuro */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/95 via-black/70 to-transparent pointer-events-none z-10" aria-hidden="true"></div>
                 
                 {/* Botón fijo optimizado */}
                 <button
