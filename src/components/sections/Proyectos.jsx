@@ -183,9 +183,9 @@ Un proyecto completo que demuestra la capacidad de desarrollar soluciones escala
         {
             id: 2,
             titulo: "D'Rafa Peluquería",
-            categoria: "fullstack",
+            categoria: "frontend",
             descripcion:
-                "Sitio web corporativo completo para una peluquería. Proyecto Full Stack con enfoque en SEO local y conversión de visitantes.",
+                "Sitio web corporativo completo para una peluquería. Proyecto Frontend con enfoque en SEO local y conversión de visitantes.",
             descripcion2: `Sitio Web para Peluquería - Proyecto Full Stack
 
 Desarrollé un sitio web corporativo completo para un cliente del sector servicios. El proyecto incluyó desde el diseño hasta el deployment, con enfoque en SEO local y conversión de visitantes.
