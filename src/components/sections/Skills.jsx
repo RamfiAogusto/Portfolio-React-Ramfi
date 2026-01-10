@@ -36,7 +36,7 @@ function Skills() {
                 className="relative text-center mt-10"
                 initial={{ y: 400, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.05, margin: "-100px 0px" }}
                 transition={{ delay: 0.1 }}
             >
                 <div className="subtitulo">

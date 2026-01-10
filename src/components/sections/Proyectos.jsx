@@ -365,7 +365,7 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
             className="proyectos-section py-16 relative"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.05, margin: "-100px 0px" }}
             variants={sectionVariants}
         >
             {/* Elementos decorativos */}
@@ -399,7 +399,13 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
             />
             
             <div className="container mx-auto px-4">
-                <motion.div variants={titleVariants} className="mb-12">
+                <motion.div 
+                    variants={titleVariants} 
+                    className="mb-12"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1, margin: "-150px 0px" }}
+                >
                     <TitleSection>Últimos proyectos</TitleSection>
                 </motion.div>
 
@@ -407,6 +413,9 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
                 <motion.div 
                     className="mb-8"
                     variants={filterVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1, margin: "-100px 0px" }}
                 >
                     <div className="flex flex-wrap justify-center gap-3">
                         {categorias.map((categoria) => (
@@ -439,7 +448,8 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
                     className="flex flex-wrap justify-center gap-8"
                     key={`${currentCategory}-${currentPage}`}
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.05, margin: "-50px 0px" }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
                 >
@@ -448,10 +458,11 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
                             key={proyecto.id}
                             className="proyecto-wrapper w-full sm:w-[450px] md:w-[400px] lg:w-[350px]"
                             initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.1, margin: "-50px 0px" }}
                             transition={{ 
                                 duration: 0.4, 
-                                delay: index * 0.1,
+                                delay: index * 0.05,
                                 ease: "easeOut"
                             }}
                         >

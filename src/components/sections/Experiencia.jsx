@@ -137,7 +137,7 @@ const Experiencia = memo(function Experiencia() {
       className="timeline-section relative mb-10"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.05, margin: "-100px 0px" }}
       variants={sectionVariants}
     >
       {/* Elementos decorativos animados optimizados */}

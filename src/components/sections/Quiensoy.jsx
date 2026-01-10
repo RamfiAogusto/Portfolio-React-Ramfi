@@ -36,7 +36,7 @@ function Quiensoy() {
             className="max-w-lg relative about-content"
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.1, margin: "-100px 0px" }}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
             <TitleSection>¿Quién soy?</TitleSection>
@@ -45,7 +45,7 @@ function Quiensoy() {
               className="px-6 md:py-6 text-center about-text leading-relaxed"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1, margin: "-50px 0px" }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               Desarrollador web apasionado con experiencia en HTML, CSS,
@@ -59,7 +59,7 @@ function Quiensoy() {
               className="px-6 text-center about-highlight font-semibold text-[var(--primary)]"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1, margin: "-50px 0px" }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
               ¡Conoce mi mundo tecnológico!
@@ -70,7 +70,7 @@ function Quiensoy() {
               className="flex flex-wrap justify-center gap-2 mt-6 px-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1, margin: "-50px 0px" }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
               {skills.map((skill, index) => (
@@ -80,7 +80,7 @@ function Quiensoy() {
                   custom={index}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.1, margin: "-30px 0px" }}
                   variants={textVariants}
                   whileHover={{ 
                     scale: 1.1, 
@@ -99,7 +99,7 @@ function Quiensoy() {
             className="w-[80%] md:max-w-sm relative"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.1, margin: "-100px 0px" }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
             <img 

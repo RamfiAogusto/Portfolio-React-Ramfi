@@ -52,7 +52,7 @@ function Contactos() {
             className="contactos-section py-16 relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.05, margin: "-100px 0px" }}
             variants={containerVariants}
         >
             {/* Elementos decorativos */}
@@ -97,7 +97,7 @@ function Contactos() {
                     className="subtitulo title-decoration mb-10"
                     initial={{ opacity: 0, width: "0%" }}
                     whileInView={{ opacity: 1, width: "100%" }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1, margin: "-50px 0px" }}
                     transition={{ delay: 0.2, duration: 0.8 }}
                 >
                     <ul className="line">
