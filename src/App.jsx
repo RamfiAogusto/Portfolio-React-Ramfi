@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Experiencia from "./components/sections/Experiencia";
 import Hero from "./components/sections/Hero";
 import Proyectos from "./components/sections/Proyectos";
 import Quiensoy from "./components/sections/Quiensoy";
 import Skills from "./components/sections/Skills";
 import Contactos from "./components/sections/Contactos";
+import ProyectosPrivados from "./components/sections/ProyectosPrivados";
 import imgBack from "./assets/descarga.png";
 import AnimatedCursor from "react-animated-cursor";
 
-
-function App() {
+// Componente Landing (página principal)
+const Landing = () => {
     const backgroundStyle = {
         backgroundImage: `url(${imgBack})`,
     };
@@ -339,6 +341,18 @@ function App() {
             <Skills />
             <Contactos />
         </div>
+    );
+};
+
+// Componente principal con routing
+function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/proyectos" element={<ProyectosPrivados />} />
+            </Routes>
+        </Router>
     );
 }
 

@@ -370,7 +370,7 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
         >
             {/* Elementos decorativos */}
             <motion.div 
-                className="absolute -z-10 w-64 h-64 rounded-full bg-[var(--primary-light)] opacity-10 blur-3xl"
+                className="absolute -z-10 w-64 h-64 rounded-full bg-[var(--primary-light)] opacity-10 blur-3xl hidden md:block"
                 style={{ top: '10%', right: '-5%' }}
                 animate={{ 
                     scale: [1, 1.2, 1],
@@ -384,7 +384,7 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
             />
             
             <motion.div 
-                className="absolute -z-10 w-72 h-72 rounded-full bg-[var(--primary-light)] opacity-10 blur-3xl"
+                className="absolute -z-10 w-72 h-72 rounded-full bg-[var(--primary-light)] opacity-10 blur-3xl hidden md:block"
                 style={{ bottom: '15%', left: '-10%' }}
                 animate={{ 
                     scale: [1, 1.3, 1],

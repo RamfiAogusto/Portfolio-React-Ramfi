@@ -99,7 +99,9 @@
     backface-visibility: visible;
 }
 body {
-    background-color: rgb(4, 7, 10);
+    /* background-color: rgb(4, 7, 10); */
+    background: radial-gradient(125% 125% at 50% 10%, rgb(4, 7, 10) 40%, rgb(11, 0, 27) 100%);
+    
     transition: ease 0.2s;
 }
 
