@@ -659,15 +659,31 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
                                                 </motion.div>
                                                 
                                                 <motion.button
-                                                    className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center rounded-full bg-[rgba(13,158,216,0.1)] border border-[rgba(13,158,216,0.3)]"
+                                                    className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-[rgba(13,158,216,0.2)] border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white shadow-lg shadow-[var(--primary)]/30 transition-all duration-300 z-50"
                                                     onClick={() => setSelectedId(null)}
                                                     whileHover={{ 
-                                                        scale: 1.1,
-                                                        backgroundColor: "rgba(13,158,216,0.2)"
+                                                        scale: 1.15,
+                                                        rotate: 90,
+                                                        boxShadow: "0 0 20px rgba(13, 158, 216, 0.5)"
                                                     }}
+                                                    whileTap={{ scale: 0.9 }}
                                                     variants={modalContentVariants}
+                                                    aria-label="Cerrar modal"
                                                 >
-                                                    <img src={Close} className="w-5 h-5" />
+                                                    <svg 
+                                                        xmlns="http://www.w3.org/2000/svg" 
+                                                        className="w-6 h-6" 
+                                                        fill="none" 
+                                                        viewBox="0 0 24 24" 
+                                                        stroke="currentColor" 
+                                                        strokeWidth={2.5}
+                                                    >
+                                                        <path 
+                                                            strokeLinecap="round" 
+                                                            strokeLinejoin="round" 
+                                                            d="M6 18L18 6M6 6l12 12" 
+                                                        />
+                                                    </svg>
                                                 </motion.button>
                                             </div>
                                         );
