@@ -2,7 +2,7 @@ import React from "react";
 /* import iconInsta from "../assets/icons/instagram_dark.svg"; */
 import iconLinkedin from "../assets/icons/linkedin.svg";
 import iconGithub from "../assets/icons/github.svg";
-import Cv from "../assets/archivos/cv.pdf";
+import Cv from "../assets/archivos/CV Ramfi Aogusto Desarrollador Web React.pdf";
 import { motion } from "framer-motion";
 
 function GroupButons() {
@@ -62,7 +62,7 @@ function GroupButons() {
                 }}
                 whileTap={{ scale: 0.98, y: -2 }}
                 id="btn"
-                download="cv.pdf"
+                download="CV Ramfi Aogusto Desarrollador Web React.pdf"
                 href={Cv}
                 className="btn-primary relative overflow-hidden px-6 py-3 rounded-lg font-semibold text-white flex items-center justify-center gap-2 min-w-[180px]"
                 aria-label="Descargar CV"
