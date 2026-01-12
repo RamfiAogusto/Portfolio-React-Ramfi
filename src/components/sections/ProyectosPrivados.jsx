@@ -119,25 +119,10 @@ const ProyectosPrivados = () => {
             id: 1,
             titulo: "Banco Vimenca",
             categoria: "fullstack",
-            descripcion: "Sitio web corporativo completo para Banco Vimenca. Plataforma financiera con diseño moderno y funcionalidades avanzadas.",
-            descripcion2: `Banco Vimenca - Proyecto Corporativo
-
-Desarrollo completo del sitio web corporativo para Banco Vimenca, una institución financiera líder. El proyecto incluye diseño responsivo, integración de sistemas y optimización para conversión.
-
-Stack técnico:
-React, TypeScript, TailwindCSS, Node.js, WordPress
-
-Funcionalidades implementadas:
-- Diseño responsivo y moderno
-- Integración con sistemas bancarios
-- Optimización SEO
-- Panel de administración
-- Formularios seguros y validados
-
-Herramientas:
-WordPress, React, TailwindCSS, Node.js`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconReact, iconTailwind, iconJavascript, iconWordpress, iconPhp],
+            skills: [],
             githubLink: null,
             siteLink: "https://bancovimenca.com/",
         },
@@ -145,21 +130,10 @@ WordPress, React, TailwindCSS, Node.js`,
             id: 2,
             titulo: "Grupo Vimenca",
             categoria: "fullstack",
-            descripcion: "Sitio web corporativo para Grupo Vimenca, mostrando sus servicios y presencia en el mercado.",
-            descripcion2: `Grupo Vimenca - Sitio Web Corporativo
-
-Desarrollo del sitio web corporativo para Grupo Vimenca, destacando sus servicios y presencia en el mercado.
-
-Stack técnico:
-WordPress, PHP, JavaScript, CSS
-
-Funcionalidades:
-- Diseño corporativo profesional
-- Secciones informativas
-- Integración de contenido
-- Diseño responsivo`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconPhp, iconJavascript, iconCss],
+            skills: [],
             githubLink: null,
             siteLink: "https://grupovimenca.com.do/",
         },
@@ -167,21 +141,10 @@ Funcionalidades:
             id: 3,
             titulo: "Adecc",
             categoria: "frontend",
-            descripcion: "Sitio web corporativo para Adecc, empresa de servicios profesionales.",
-            descripcion2: `Adecc - Sitio Web Corporativo
-
-Desarrollo del sitio web para Adecc, empresa especializada en servicios profesionales y consultoría.
-
-Stack técnico:
-React, TailwindCSS, JavaScript
-
-Funcionalidades:
-- Diseño moderno y profesional
-- Secciones informativas
-- Formularios de contacto
-- Diseño responsivo`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconReact, iconTailwind, iconJavascript],
+            skills: [],
             githubLink: null,
             siteLink: "https://adecc.com.do/",
         },
@@ -189,21 +152,10 @@ Funcionalidades:
             id: 4,
             titulo: "Papel Domino",
             categoria: "frontend",
-            descripcion: "E-commerce y sitio web para Papel Domino, empresa de productos de papel y oficina.",
-            descripcion2: `Papel Domino - E-commerce
-
-Desarrollo del sitio web y plataforma e-commerce para Papel Domino, especializada en productos de papel y suministros de oficina.
-
-Stack técnico:
-WordPress, WooCommerce, PHP, JavaScript
-
-Funcionalidades:
-- Catálogo de productos
-- Carrito de compras
-- Sistema de pagos
-- Panel de administración`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconPhp, iconJavascript, iconCss],
+            skills: [],
             githubLink: null,
             siteLink: "https://papeldomino.do/",
         },
@@ -211,21 +163,10 @@ Funcionalidades:
             id: 5,
             titulo: "Vimenca",
             categoria: "fullstack",
-            descripcion: "Sitio web corporativo principal para Vimenca, mostrando sus servicios y soluciones.",
-            descripcion2: `Vimenca - Sitio Web Corporativo
-
-Desarrollo del sitio web corporativo principal para Vimenca, destacando sus servicios y soluciones empresariales.
-
-Stack técnico:
-WordPress, React, TailwindCSS
-
-Funcionalidades:
-- Diseño corporativo
-- Secciones de servicios
-- Formularios de contacto
-- Integración de contenido`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconReact, iconTailwind, iconJavascript],
+            skills: [],
             githubLink: null,
             siteLink: "https://www.vimenca.com.do/",
         },
@@ -233,21 +174,10 @@ Funcionalidades:
             id: 6,
             titulo: "All Media Briefs",
             categoria: "frontend",
-            descripcion: "Plataforma de briefs para All Media, sistema de gestión de proyectos publicitarios.",
-            descripcion2: `All Media Briefs - Plataforma de Gestión
-
-Desarrollo de la plataforma de briefs para All Media, sistema especializado en gestión de proyectos publicitarios y creativos.
-
-Stack técnico:
-React, TypeScript, TailwindCSS
-
-Funcionalidades:
-- Sistema de briefs
-- Gestión de proyectos
-- Dashboard interactivo
-- Formularios avanzados`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconReact, iconTypescript, iconTailwind, iconJavascript],
+            skills: [],
             githubLink: null,
             siteLink: "https://allmedia.com.do/briefs/",
         },
@@ -255,21 +185,10 @@ Funcionalidades:
             id: 7,
             titulo: "A1 Clinic PR",
             categoria: "frontend",
-            descripcion: "Sitio web para A1 Clinic PR, clínica médica con sistema de citas y servicios.",
-            descripcion2: `A1 Clinic PR - Sitio Web Médico
-
-Desarrollo del sitio web para A1 Clinic PR, incluyendo sistema de citas y presentación de servicios médicos.
-
-Stack técnico:
-WordPress, PHP, JavaScript
-
-Funcionalidades:
-- Sistema de citas online
-- Información de servicios
-- Galería de instalaciones
-- Formularios de contacto`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconPhp, iconJavascript, iconCss],
+            skills: [],
             githubLink: null,
             siteLink: "https://a1clinicpr.com/",
         },
@@ -277,21 +196,10 @@ Funcionalidades:
             id: 8,
             titulo: "Banesco Internacional",
             categoria: "fullstack",
-            descripcion: "Sitio web corporativo para Banesco Internacional, institución financiera.",
-            descripcion2: `Banesco Internacional - Sitio Web Corporativo
-
-Desarrollo del sitio web corporativo para Banesco Internacional, destacando sus servicios financieros y presencia internacional.
-
-Stack técnico:
-WordPress, React, TailwindCSS
-
-Funcionalidades:
-- Diseño corporativo profesional
-- Información de servicios
-- Integración de sistemas
-- Diseño responsivo`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconReact, iconTailwind, iconJavascript],
+            skills: [],
             githubLink: null,
             siteLink: "https://banescointernacional.com/",
         },
@@ -299,21 +207,10 @@ Funcionalidades:
             id: 9,
             titulo: "Promedica",
             categoria: "frontend",
-            descripcion: "Sitio web para Promedica, empresa de servicios médicos y farmacéuticos.",
-            descripcion2: `Promedica - Sitio Web Médico
-
-Desarrollo del sitio web para Promedica, empresa especializada en servicios médicos y productos farmacéuticos.
-
-Stack técnico:
-WordPress, PHP, JavaScript
-
-Funcionalidades:
-- Catálogo de productos
-- Información de servicios
-- Formularios de contacto
-- Diseño responsivo`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconPhp, iconJavascript, iconCss],
+            skills: [],
             githubLink: null,
             siteLink: "https://promedica.com.do/",
         },
@@ -321,21 +218,10 @@ Funcionalidades:
             id: 10,
             titulo: "Dexlitos X",
             categoria: "frontend",
-            descripcion: "Sitio web para Dexlitos X, empresa de servicios y productos.",
-            descripcion2: `Dexlitos X - Sitio Web Corporativo
-
-Desarrollo del sitio web para Dexlitos X, destacando sus servicios y productos en el mercado.
-
-Stack técnico:
-WordPress, JavaScript, CSS
-
-Funcionalidades:
-- Diseño moderno
-- Secciones informativas
-- Formularios de contacto
-- Diseño responsivo`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconJavascript, iconCss, iconHtml],
+            skills: [],
             githubLink: null,
             siteLink: "https://dexlitosx.com/",
         },
@@ -343,21 +229,10 @@ Funcionalidades:
             id: 11,
             titulo: "Lupard",
             categoria: "frontend",
-            descripcion: "Sitio web corporativo para Lupard, empresa de servicios especializados.",
-            descripcion2: `Lupard - Sitio Web Corporativo
-
-Desarrollo del sitio web corporativo para Lupard, empresa especializada en servicios profesionales.
-
-Stack técnico:
-WordPress, React, TailwindCSS
-
-Funcionalidades:
-- Diseño corporativo
-- Presentación de servicios
-- Formularios de contacto
-- Integración de contenido`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconReact, iconTailwind, iconJavascript],
+            skills: [],
             githubLink: null,
             siteLink: "https://lupard.com/",
         },
@@ -365,21 +240,10 @@ Funcionalidades:
             id: 12,
             titulo: "Risk Managers",
             categoria: "frontend",
-            descripcion: "Sitio web para Risk Managers, empresa de gestión de riesgos y consultoría.",
-            descripcion2: `Risk Managers - Sitio Web Corporativo
-
-Desarrollo del sitio web para Risk Managers, empresa especializada en gestión de riesgos y servicios de consultoría.
-
-Stack técnico:
-WordPress, PHP, JavaScript
-
-Funcionalidades:
-- Diseño profesional
-- Información de servicios
-- Formularios de contacto
-- Diseño responsivo`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconPhp, iconJavascript, iconCss],
+            skills: [],
             githubLink: null,
             siteLink: "https://riskmanagers.com.do/",
         },
@@ -387,21 +251,10 @@ Funcionalidades:
             id: 13,
             titulo: "Life Health MS",
             categoria: "frontend",
-            descripcion: "Sitio web para Life Health MS, empresa de servicios de salud y bienestar.",
-            descripcion2: `Life Health MS - Sitio Web de Salud
-
-Desarrollo del sitio web para Life Health MS, empresa especializada en servicios de salud y bienestar.
-
-Stack técnico:
-WordPress, JavaScript, CSS
-
-Funcionalidades:
-- Información de servicios
-- Sistema de citas
-- Formularios de contacto
-- Diseño responsivo`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconJavascript, iconCss, iconHtml],
+            skills: [],
             githubLink: null,
             siteLink: "https://lifehealthms.com/",
         },
@@ -409,21 +262,10 @@ Funcionalidades:
             id: 14,
             titulo: "Amadita Mujer",
             categoria: "frontend",
-            descripcion: "Sitio web para Amadita Mujer, plataforma de servicios y productos para mujeres.",
-            descripcion2: `Amadita Mujer - Plataforma Web
-
-Desarrollo de la plataforma web para Amadita Mujer, enfocada en servicios y productos para mujeres.
-
-Stack técnico:
-WordPress, React, TailwindCSS
-
-Funcionalidades:
-- Catálogo de productos
-- Información de servicios
-- Formularios de contacto
-- Diseño responsivo y moderno`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconReact, iconTailwind, iconJavascript],
+            skills: [],
             githubLink: null,
             siteLink: "https://amaditamujer.com/",
         },
@@ -431,21 +273,10 @@ Funcionalidades:
             id: 15,
             titulo: "Mujeres Solidarias",
             categoria: "frontend",
-            descripcion: "Sitio web para Mujeres Solidarias, organización sin fines de lucro.",
-            descripcion2: `Mujeres Solidarias - Sitio Web ONG
-
-Desarrollo del sitio web para Mujeres Solidarias, organización sin fines de lucro enfocada en el empoderamiento de mujeres.
-
-Stack técnico:
-WordPress, PHP, JavaScript
-
-Funcionalidades:
-- Información de la organización
-- Programas y actividades
-- Formularios de contacto y donaciones
-- Diseño responsivo y accesible`,
+            descripcion: "",
+            descripcion2: "",
             img: placeholderImg,
-            skills: [iconWordpress, iconPhp, iconJavascript, iconCss],
+            skills: [],
             githubLink: null,
             siteLink: "https://mujeressolidarias.org.do/",
         },
