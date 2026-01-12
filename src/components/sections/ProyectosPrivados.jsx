@@ -22,6 +22,7 @@ import iconPostgresql from "../../assets/skills/postgresql.svg";
 import iconWordpress from "../../assets/skills/wordpress.svg";
 import iconPhp from "../../assets/skills/PHP.png";
 import iconElementor from "../../assets/skills/elementor.svg";
+import iconStrapi from "../../assets/skills/strapi.svg";
 
 // Imagen placeholder para proyectos sin imagen específica
 const placeholderImg = "https://via.placeholder.com/600x400/0d9ed8/ffffff?text=Proyecto+Web";
@@ -121,10 +122,29 @@ const ProyectosPrivados = () => {
             id: 1,
             titulo: "Banco Vimenca",
             categoria: "fullstack",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web corporativo para institución financiera desarrollado con React, TypeScript y TailwindCSS.",
+            descripcion2: `Banco Vimenca - Proyecto Corporativo Full Stack
+
+Desarrollo completo del sitio web corporativo para Banco Vimenca, una institución financiera líder en República Dominicana.
+
+Stack Técnico:
+Frontend: React, TypeScript, React Router, TailwindCSS
+Backend: Node.js, Express, Strapi (Headless CMS)
+Base de datos: PostgreSQL
+
+Características Principales:
+• Diseño responsivo y moderno optimizado para conversión
+• Arquitectura escalable con TypeScript para mayor robustez
+• Sistema de navegación fluido con React Router
+• Integración con Strapi CMS para gestión de contenido dinámico
+• API RESTful para comunicación frontend-backend
+• Optimización SEO y rendimiento
+• Formularios seguros y validados
+• Panel de administración con Strapi para gestión de contenido
+
+Este proyecto demuestra mi capacidad para desarrollar soluciones completas desde el frontend hasta el backend, manejando todos los aspectos técnicos para crear un sitio corporativo profesional y funcional.`,
             img: placeholderImg,
-            skills: [iconReact, iconTailwind],
+            skills: [iconReact, iconTypescript, iconTailwind, iconReactRouter, iconNodejs, iconExpressjs, iconStrapi, iconPostgresql],
             githubLink: null,
             siteLink: "https://bancovimenca.com/",
         },
@@ -175,11 +195,41 @@ const ProyectosPrivados = () => {
         {
             id: 6,
             titulo: "All Media Briefs",
-            categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            categoria: "fullstack",
+            descripcion: "Sistema interno de gestión de briefs con formularios dinámicos, backend robusto y automatización de procesos.",
+            descripcion2: `All Media Briefs - Sistema de Gestión de Briefs
+
+Aplicación web interna compleja desarrollada para centralizar y optimizar el proceso de recopilación de información de clientes en una agencia con múltiples servicios.
+
+Stack Técnico:
+Frontend: React, TypeScript, React Router, TailwindCSS
+Backend: Node.js, Express
+Base de datos: MongoDB
+Otras herramientas: Nodemailer, PDFKit
+
+El Problema:
+La agencia ofrece diversos servicios (Estrategia para Medios, Creatividad, Producción, Eventos, etc.), cada uno requiriendo diferentes preguntas a los clientes. Se usaban múltiples formularios de Google Forms, lo que generaba ineficiencias y pérdida de información.
+
+La Solución:
+Desarrollé un sistema inteligente de formularios dinámicos que:
+
+• Sistema de Selección de Servicios: El usuario primero selecciona el/los servicio(s) que requiere
+• Formularios Dinámicos: Dependiendo de la selección, el sistema muestra automáticamente los formularios específicos de cada servicio
+• Preguntas Comunes: Identifica y muestra preguntas compartidas entre servicios para evitar redundancia
+• Backend Robusto: Almacena la información en MongoDB de forma estructurada
+• Sistema de Notificaciones: Envía automáticamente correos electrónicos con PDFs personalizados a los departamentos correspondientes
+• Dashboard Administrativo: Visualización centralizada de todos los briefs recibidos
+
+Características Técnicas:
+• Arquitectura modular con TypeScript para mantenibilidad
+• Validación de formularios en tiempo real
+• Generación dinámica de PDFs con la información recopilada
+• Sistema de enrutamiento por departamentos
+• Interfaz intuitiva y responsive
+
+Este proyecto demuestra mi capacidad para analizar problemas complejos, diseñar soluciones escalables y desarrollar aplicaciones full-stack completas que resuelven necesidades reales de negocio.`,
             img: placeholderImg,
-            skills: [iconReact, iconTailwind],
+            skills: [iconReact, iconTypescript, iconTailwind, iconReactRouter, iconNodejs, iconExpressjs, iconApi],
             githubLink: null,
             siteLink: "https://allmedia.com.do/briefs/",
         },
