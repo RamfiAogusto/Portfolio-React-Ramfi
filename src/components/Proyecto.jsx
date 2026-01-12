@@ -119,14 +119,15 @@ const Proyecto = memo(function Proyecto(props) {
             </div>
             
             {/* Skills optimizados */}
-            <div className="skills flex mb-4 gap-2.5 flex-wrap" role="list" aria-label="Tecnologías utilizadas en este proyecto">
+            <div className="skills flex mb-4 gap-2.5 flex-wrap items-center min-h-[28px] sm:min-h-[32px]" role="list" aria-label="Tecnologías utilizadas en este proyecto">
                 {props.skills.map((skill, index) => (
                     <motion.img
                         key={index}
                         src={skill}
                         alt={`Tecnología ${index + 1} utilizada en ${props.titulo}`}
-                        className="max-h-6 sm:max-h-7 hover:max-h-8 transition-all duration-200"
+                        className="max-h-6 sm:max-h-7"
                         variants={skillItemVariants}
+                        whileHover="hover"
                         role="listitem"
                     />
                 ))}

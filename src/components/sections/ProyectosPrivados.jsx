@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import AnimatedCursor from "react-animated-cursor";
 import Proyecto from "../Proyecto";
 import TitleSection from "../TitleSection";
 import imgBack from "../../assets/descarga.png";
@@ -335,8 +336,80 @@ const ProyectosPrivados = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    // Estilos para las animaciones del cursor
+    const cursorAnimations = `
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.7; }
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes morph {
+            0% { border-radius: 50%; }
+            25% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%; }
+            75% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+            100% { border-radius: 50%; }
+        }
+        
+        @keyframes colorShift {
+            0% { border-color: rgba(13, 158, 216, 0.7); }
+            33% { border-color: rgba(138, 43, 226, 0.7); }
+            66% { border-color: rgba(255, 105, 180, 0.7); }
+            100% { border-color: rgba(13, 158, 216, 0.7); }
+        }
+        
+        @keyframes dash {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 100; }
+        }
+    `;
+
     return (
         <div style={backgroundStyle} className="relative w-full min-h-screen py-16 px-4">
+            <style>{cursorAnimations}</style>
+            <div id="sombra">
+                <AnimatedCursor
+                    innerSize={8}
+                    outerSize={35}
+                    color="13, 158, 216"
+                    outerAlpha={0.3}
+                    innerScale={0.7}
+                    outerScale={1.5}
+                    trailingSpeed={8}
+                    outerStyle={{
+                        border: "2px solid var(--primary)",
+                        mixBlendMode: "exclusion",
+                        boxShadow: "0 0 15px 2px rgba(13, 158, 216, 0.4)",
+                        zIndex: "999999",
+                    }}
+                    innerStyle={{
+                        backgroundColor: "var(--primary)",
+                        mixBlendMode: "exclusion",
+                    }}
+                    clickables={[
+                        "a",
+                        'input[type="text"]',
+                        'input[type="email"]',
+                        'input[type="number"]',
+                        'input[type="submit"]',
+                        'input[type="image"]',
+                        "label[for]",
+                        "select",
+                        "article",
+                        "textarea",
+                        "button",
+                        ".link",
+                        ".proyecto-card",
+                        ".proyecto-wrapper",
+                    ]}
+                />
+            </div>
             {/* Botón para volver al landing */}
             <div className="max-w-7xl mx-auto mb-8">
                 <motion.div
