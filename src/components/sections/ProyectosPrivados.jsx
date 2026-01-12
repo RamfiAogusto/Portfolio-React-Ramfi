@@ -24,6 +24,9 @@ import iconWordpress from "../../assets/skills/wordpress.svg";
 import iconPhp from "../../assets/skills/PHP.png";
 import iconElementor from "../../assets/skills/elementor.svg";
 import iconStrapi from "../../assets/skills/strapi.svg";
+// Importar imágenes de proyectos
+import imgBancoVimenca from "../../assets/proyectos/privados/Bancovimenca.png";
+import imgGrupoVimenca from "../../assets/proyectos/privados/grupovimenca.png";
 
 // Imagen placeholder para proyectos sin imagen específica
 const placeholderImg = "https://via.placeholder.com/600x400/0d9ed8/ffffff?text=Proyecto+Web";
@@ -144,7 +147,7 @@ Características Principales:
 • Panel de administración con Strapi para gestión de contenido
 
 Este proyecto demuestra mi capacidad para desarrollar soluciones completas desde el frontend hasta el backend, manejando todos los aspectos técnicos para crear un sitio corporativo profesional y funcional.`,
-            img: placeholderImg,
+            img: imgBancoVimenca,
             skills: [iconReact, iconTypescript, iconTailwind, iconReactRouter, iconNodejs, iconExpressjs, iconStrapi],
             githubLink: null,
             siteLink: "https://bancovimenca.com/",
@@ -155,7 +158,7 @@ Este proyecto demuestra mi capacidad para desarrollar soluciones completas desde
             categoria: "fullstack",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgGrupoVimenca,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://grupovimenca.com.do/",
