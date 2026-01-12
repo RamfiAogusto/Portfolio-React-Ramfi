@@ -26,6 +26,7 @@ import iconStrapi from "../../assets/skills/strapi.svg";
 
 // Imagen placeholder para proyectos sin imagen específica
 const placeholderImg = "https://via.placeholder.com/600x400/0d9ed8/ffffff?text=Proyecto+Web";
+const placeholderBackend = "https://via.placeholder.com/600x400/1a1a2e/0d9ed8?text=Backend+API";
 
 const ProyectosPrivados = () => {
     const [selectedId, setSelectedId] = useState(null);
@@ -130,7 +131,6 @@ Desarrollo completo del sitio web corporativo para Banco Vimenca, una instituci�
 Stack Técnico:
 Frontend: React, TypeScript, React Router, TailwindCSS
 Backend: Node.js, Express, Strapi (Headless CMS)
-Base de datos: PostgreSQL
 
 Características Principales:
 • Diseño responsivo y moderno optimizado para conversión
@@ -144,7 +144,7 @@ Características Principales:
 
 Este proyecto demuestra mi capacidad para desarrollar soluciones completas desde el frontend hasta el backend, manejando todos los aspectos técnicos para crear un sitio corporativo profesional y funcional.`,
             img: placeholderImg,
-            skills: [iconReact, iconTypescript, iconTailwind, iconReactRouter, iconNodejs, iconExpressjs, iconStrapi, iconPostgresql],
+            skills: [iconReact, iconTypescript, iconTailwind, iconReactRouter, iconNodejs, iconExpressjs, iconStrapi],
             githubLink: null,
             siteLink: "https://bancovimenca.com/",
         },
@@ -331,6 +331,139 @@ Este proyecto demuestra mi capacidad para analizar problemas complejos, diseñar
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://mujeressolidarias.org.do/",
+        },
+        {
+            id: 16,
+            titulo: "Banco Vimenca - Backend API",
+            categoria: "fullstack",
+            descripcion: "API REST robusta con Strapi CMS, Node.js y PostgreSQL para gestión de contenido corporativo.",
+            descripcion2: `Banco Vimenca Backend - API REST con Strapi CMS
+
+Backend completo desarrollado para el sitio web corporativo de Banco Vimenca, implementando una arquitectura moderna con Headless CMS.
+
+Stack Técnico:
+Backend: Node.js, Express, Strapi CMS
+Autenticación: JWT
+
+Arquitectura y Características:
+
+Sistema de Gestión de Contenido (CMS):
+• Implementación de Strapi como Headless CMS para gestión de contenido
+• Modelos de contenido personalizados para diferentes secciones del sitio
+• Sistema de roles y permisos para administradores
+• API RESTful automática generada por Strapi
+• Gestión eficiente de relaciones entre entidades
+
+Seguridad:
+• Autenticación JWT para endpoints protegidos
+• Validación de datos en el servidor
+• Sanitización de inputs
+• CORS configurado para dominios específicos
+• Rate limiting para prevenir abuso
+
+API Features:
+• Endpoints RESTful para todas las entidades del sitio
+• Paginación y filtrado avanzado
+• Upload y gestión de media files
+• Versionado de contenido
+• Búsqueda optimizada
+
+Optimización:
+• Caching de consultas frecuentes
+• Lazy loading de relaciones
+• Queries optimizadas
+• Logs estructurados para debugging y monitoreo
+
+Este proyecto demuestra mi capacidad para diseñar e implementar backends escalables usando tecnologías modernas, integrando CMS headless y bases de datos relacionales para crear APIs robustas y mantenibles.`,
+            img: placeholderBackend,
+            skills: [iconNodejs, iconExpressjs, iconStrapi, iconApi, iconJavascript],
+            githubLink: null,
+            siteLink: null,
+        },
+        {
+            id: 17,
+            titulo: "All Media Briefs - Backend System",
+            categoria: "fullstack",
+            descripcion: "Backend complejo con MongoDB, generación de PDFs, sistema de emails automáticos y enrutamiento por departamentos.",
+            descripcion2: `All Media Briefs Backend - Sistema de Gestión Automática
+
+Backend robusto desarrollado para gestionar un sistema complejo de briefs con automatización de procesos y notificaciones inteligentes.
+
+Stack Técnico:
+Backend: Node.js, Express
+Base de datos: MongoDB
+Herramientas: Nodemailer, PDFKit
+Arquitectura: RESTful API, Microservicios
+
+El Desafío:
+Crear un sistema backend que no solo almacene información, sino que la procese inteligentemente y distribuya notificaciones personalizadas a múltiples departamentos según los servicios solicitados.
+
+Arquitectura del Sistema:
+
+1. API REST Principal:
+• Endpoints para recepción de briefs desde el frontend
+• Validación exhaustiva de datos
+• Normalización de información
+• Respuestas estructuradas con códigos HTTP apropiados
+
+2. Base de Datos MongoDB:
+• Esquema flexible para diferentes tipos de servicios
+• Queries optimizadas con índices
+• Almacenamiento de briefs completos
+• Historial de cambios y versiones
+• Búsqueda y filtrado avanzado
+
+3. Sistema de Procesamiento:
+• Parser inteligente que analiza servicios seleccionados
+• Identificación automática de departamentos responsables
+• Extracción de información relevante por servicio
+• Validación de datos por tipo de servicio
+
+4. Generación Dinámica de PDFs:
+• PDFKit para creación de documentos profesionales
+• Templates personalizados por tipo de servicio
+• Formateo automático de respuestas
+• Logos e identidad corporativa
+• Documentos optimizados para impresión
+
+5. Sistema de Notificaciones:
+• Nodemailer para envío de correos
+• Routing automático por departamentos
+• Emails personalizados con información específica
+• Adjuntos de PDFs generados
+• Confirmación de envío al cliente
+• Sistema de plantillas HTML responsivas
+
+6. Enrutamiento Inteligente:
+• Mapeo de servicios a departamentos
+• Reglas de negocio para casos especiales
+• Copia a múltiples departamentos cuando aplica
+• Escalamiento automático a supervisores
+
+7. Dashboard Backend:
+• Endpoints para visualización de todos los briefs
+• Filtros por fecha, servicio, departamento
+• Estadísticas y métricas
+• Exportación de datos
+
+Seguridad y Confiabilidad:
+• Validación de schemas con middleware
+• Manejo robusto de errores
+• Logs detallados de todas las operaciones
+• Transacciones para operaciones críticas
+• Retry logic para emails fallidos
+
+Performance:
+• Procesamiento asíncrono de PDFs y emails
+• Queue system para cargas pesadas
+• Caching de configuraciones
+• Optimización de queries a MongoDB
+
+Este proyecto representa uno de los backends más complejos que he desarrollado, demostrando mi capacidad para crear sistemas que no solo almacenan datos, sino que automatizan procesos de negocio complejos, reduciendo significativamente el tiempo de gestión manual y mejorando la eficiencia operativa.`,
+            img: placeholderBackend,
+            skills: [iconNodejs, iconExpressjs, iconApi, iconJavascript],
+            githubLink: null,
+            siteLink: null,
         },
     ];
 

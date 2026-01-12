@@ -135,18 +135,20 @@ const Proyecto = memo(function Proyecto(props) {
             
             {/* Botones optimizados */}
             <div className="buttons_container flex gap-3">
-                <motion.a
-                    href={props.siteLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variants={buttonVariants}
-                    whileHover="hover"
-                    className="site-button flex-1 bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.4)] rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.6)] text-center focus:outline-none focus:ring-2 focus:ring-[rgba(13,158,216,0.5)] min-h-[44px] flex items-center justify-center"
-                    onClick={handleStopPropagation}
-                    aria-label={`Visitar sitio de ${props.titulo}`}
-                >
-                    Visitar sitio
-                </motion.a>
+                {props.siteLink && (
+                    <motion.a
+                        href={props.siteLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variants={buttonVariants}
+                        whileHover="hover"
+                        className="site-button flex-1 bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.4)] rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.6)] text-center focus:outline-none focus:ring-2 focus:ring-[rgba(13,158,216,0.5)] min-h-[44px] flex items-center justify-center"
+                        onClick={handleStopPropagation}
+                        aria-label={`Visitar sitio de ${props.titulo}`}
+                    >
+                        Visitar sitio
+                    </motion.a>
+                )}
                 
                 {props.githubLink && (
                     <motion.a
@@ -165,6 +167,12 @@ const Proyecto = memo(function Proyecto(props) {
                             className="h-5 w-5"
                         />
                     </motion.a>
+                )}
+                
+                {!props.siteLink && !props.githubLink && (
+                    <div className="w-full py-3 px-4 bg-[rgba(13,158,216,0.05)] text-gray-400 border border-[rgba(13,158,216,0.2)] rounded-lg text-center text-sm">
+                        Proyecto Backend
+                    </div>
                 )}
             </div>
         </motion.article>
