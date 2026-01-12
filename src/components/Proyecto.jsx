@@ -142,9 +142,9 @@ const Proyecto = memo(function Proyecto(props) {
                     whileHover="hover"
                     className="site-button flex-1 bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.4)] rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.6)] text-center focus:outline-none focus:ring-2 focus:ring-[rgba(13,158,216,0.5)] min-h-[44px] flex items-center justify-center"
                     onClick={handleStopPropagation}
-                    aria-label={`Ver demo en vivo de ${props.titulo}`}
+                    aria-label={`Visitar sitio de ${props.titulo}`}
                 >
-                    Ver demo
+                    Visitar sitio
                 </motion.a>
                 
                 {props.githubLink && (
