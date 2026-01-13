@@ -27,6 +27,7 @@ import iconStrapi from "../../assets/skills/strapi.svg";
 // Importar imágenes de proyectos
 import imgBancoVimenca from "../../assets/proyectos/privados/Bancovimenca.png";
 import imgGrupoVimenca from "../../assets/proyectos/privados/grupovimenca.png";
+import imgAdecc from "../../assets/proyectos/privados/adecc.jpg";
 
 // Imagen placeholder para proyectos sin imagen específica
 const placeholderImg = "https://via.placeholder.com/600x400/0d9ed8/ffffff?text=Proyecto+Web";
@@ -169,7 +170,7 @@ Este proyecto demuestra mi capacidad para desarrollar soluciones completas desde
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgAdecc,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://adecc.com.do/",
