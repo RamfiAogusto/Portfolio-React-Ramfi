@@ -35,6 +35,10 @@ import imgAmaditaMujer from "../../assets/proyectos/privados/amaditamujer.jpg";
 import imgMujeresSolidarias from "../../assets/proyectos/privados/mujeres solidarias.png";
 import imgRiskManagers from "../../assets/proyectos/privados/risk managers.jpg";
 import imgA1Clinic from "../../assets/proyectos/privados/a1clinic.jpg";
+import imgPromedica from "../../assets/proyectos/privados/promedica.jpg";
+import imgDexlitosX from "../../assets/proyectos/privados/dexlitosx.jpg";
+import imgLifeHealthMS from "../../assets/proyectos/privados/lifehealth.jpg";
+import imgPapelDomino from "../../assets/proyectos/privados/papeldomino.jpg";
 
 // Imagen placeholder para proyectos sin imagen específica
 const placeholderImg = "https://via.placeholder.com/600x400/0d9ed8/ffffff?text=Proyecto+Web";
@@ -439,7 +443,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgPromedica,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://promedica.com.do/",
@@ -450,7 +454,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgDexlitosX,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://dexlitosx.com/",
@@ -461,7 +465,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgLifeHealthMS,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://lifehealthms.com/",
@@ -472,7 +476,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgPapelDomino,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://papeldomino.do/",
