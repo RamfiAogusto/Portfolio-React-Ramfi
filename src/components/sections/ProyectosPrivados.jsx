@@ -39,10 +39,11 @@ import imgPromedica from "../../assets/proyectos/privados/promedica.jpg";
 import imgDexlitosX from "../../assets/proyectos/privados/dexlitosx.jpg";
 import imgLifeHealthMS from "../../assets/proyectos/privados/lifehealth.jpg";
 import imgPapelDomino from "../../assets/proyectos/privados/papeldomino.jpg";
+import imgBackend from "../../assets/proyectos/privados/backend.jpg";
 
 // Imagen placeholder para proyectos sin imagen específica
 const placeholderImg = "https://via.placeholder.com/600x400/0d9ed8/ffffff?text=Proyecto+Web";
-const placeholderBackend = "https://via.placeholder.com/600x400/1a1a2e/0d9ed8?text=Backend+API";
+const placeholderBackend = imgBackend;
 
 const ProyectosPrivados = () => {
     const [selectedId, setSelectedId] = useState(null);
@@ -395,17 +396,6 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
         },
         {
             id: 10,
-            titulo: "Vimenca Remesas",
-            categoria: "fullstack",
-            descripcion: "",
-            descripcion2: "",
-            img: placeholderImg,
-            skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
-            githubLink: null,
-            siteLink: "https://www.vimenca.com.do/",
-        },
-        {
-            id: 11,
             titulo: "Mujeres Solidarias",
             categoria: "frontend",
             descripcion: "",
@@ -416,7 +406,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             siteLink: "https://mujeressolidarias.org.do/",
         },
         {
-            id: 12,
+            id: 11,
             titulo: "Risk Managers",
             categoria: "frontend",
             descripcion: "",
@@ -427,7 +417,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             siteLink: "https://riskmanagers.com.do/",
         },
         {
-            id: 13,
+            id: 12,
             titulo: "A1 Clinic PR",
             categoria: "frontend",
             descripcion: "",
@@ -438,7 +428,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             siteLink: "https://a1clinicpr.com/",
         },
         {
-            id: 14,
+            id: 13,
             titulo: "Promedica",
             categoria: "frontend",
             descripcion: "",
@@ -449,7 +439,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             siteLink: "https://promedica.com.do/",
         },
         {
-            id: 15,
+            id: 14,
             titulo: "Dexlitos X",
             categoria: "frontend",
             descripcion: "",
@@ -460,7 +450,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             siteLink: "https://dexlitosx.com/",
         },
         {
-            id: 16,
+            id: 15,
             titulo: "Life Health MS",
             categoria: "frontend",
             descripcion: "",
@@ -471,7 +461,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             siteLink: "https://lifehealthms.com/",
         },
         {
-            id: 17,
+            id: 16,
             titulo: "Papel Domino",
             categoria: "frontend",
             descripcion: "",
