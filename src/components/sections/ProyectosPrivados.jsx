@@ -28,6 +28,9 @@ import iconStrapi from "../../assets/skills/strapi.svg";
 import imgBancoVimenca from "../../assets/proyectos/privados/Bancovimenca.png";
 import imgGrupoVimenca from "../../assets/proyectos/privados/grupovimenca.png";
 import imgAdecc from "../../assets/proyectos/privados/adecc.jpg";
+import imgAllMediaBriefs from "../../assets/proyectos/privados/allmediabriefs.jpg";
+import imgBanescoInternacional from "../../assets/proyectos/privados/banescointernacional.jpg";
+import imgLupard from "../../assets/proyectos/privados/lupard.jpg";
 
 // Imagen placeholder para proyectos sin imagen específica
 const placeholderImg = "https://via.placeholder.com/600x400/0d9ed8/ffffff?text=Proyecto+Web";
@@ -211,7 +214,7 @@ Características Técnicas:
 • Interfaz intuitiva y responsive
 
 Este proyecto demuestra mi capacidad para analizar problemas complejos, diseñar soluciones escalables y desarrollar aplicaciones full-stack completas que resuelven necesidades reales de negocio.`,
-            img: placeholderImg,
+            img: imgAllMediaBriefs,
             skills: [iconReact, iconTypescript, iconTailwind, iconReactRouter, iconNodejs, iconExpressjs, iconApi],
             githubLink: null,
             siteLink: "https://allmedia.com.do/briefs/",
@@ -222,7 +225,7 @@ Este proyecto demuestra mi capacidad para analizar problemas complejos, diseñar
             categoria: "fullstack",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgBanescoInternacional,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://banescointernacional.com/",
@@ -366,7 +369,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgLupard,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://lupard.com/",
