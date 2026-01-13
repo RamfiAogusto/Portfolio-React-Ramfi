@@ -733,7 +733,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
                                     <motion.button
                                         onClick={() => handlePageChange(currentPage - 1)}
                                         disabled={currentPage === 1}
-                                        className={`px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-2 ${
+                                        className={`px-2 sm:px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-1 sm:gap-2 ${
                                             currentPage === 1
                                                 ? "opacity-50 cursor-not-allowed"
                                                 : "hover:bg-[rgba(13,158,216,0.1)] hover:text-[var(--primary)]"
@@ -744,7 +744,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                                         </svg>
-                                        Anterior
+                                        <span className="hidden sm:inline">Anterior</span>
                                     </motion.button>
 
                                     {/* Números de página */}
@@ -770,7 +770,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
                                     <motion.button
                                         onClick={() => handlePageChange(currentPage + 1)}
                                         disabled={currentPage === totalPages}
-                                        className={`px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-2 ${
+                                        className={`px-2 sm:px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-1 sm:gap-2 ${
                                             currentPage === totalPages
                                                 ? "opacity-50 cursor-not-allowed"
                                                 : "hover:bg-[rgba(13,158,216,0.1)] hover:text-[var(--primary)]"
@@ -778,7 +778,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
                                         whileHover={currentPage !== totalPages ? { scale: 1.05 } : {}}
                                         whileTap={currentPage !== totalPages ? { scale: 0.95 } : {}}
                                     >
-                                        Siguiente
+                                        <span className="hidden sm:inline">Siguiente</span>
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
