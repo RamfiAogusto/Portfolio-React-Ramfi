@@ -31,6 +31,10 @@ import imgAdecc from "../../assets/proyectos/privados/adecc.jpg";
 import imgAllMediaBriefs from "../../assets/proyectos/privados/allmediabriefs.jpg";
 import imgBanescoInternacional from "../../assets/proyectos/privados/banescointernacional.jpg";
 import imgLupard from "../../assets/proyectos/privados/lupard.jpg";
+import imgAmaditaMujer from "../../assets/proyectos/privados/amaditamujer.jpg";
+import imgMujeresSolidarias from "../../assets/proyectos/privados/mujeres solidarias.png";
+import imgRiskManagers from "../../assets/proyectos/privados/risk managers.jpg";
+import imgA1Clinic from "../../assets/proyectos/privados/a1clinic.jpg";
 
 // Imagen placeholder para proyectos sin imagen específica
 const placeholderImg = "https://via.placeholder.com/600x400/0d9ed8/ffffff?text=Proyecto+Web";
@@ -380,7 +384,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgAmaditaMujer,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://amaditamujer.com/",
@@ -402,7 +406,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgMujeresSolidarias,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://mujeressolidarias.org.do/",
@@ -413,7 +417,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgRiskManagers,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://riskmanagers.com.do/",
@@ -424,7 +428,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             categoria: "frontend",
             descripcion: "",
             descripcion2: "",
-            img: placeholderImg,
+            img: imgA1Clinic,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
             siteLink: "https://a1clinicpr.com/",
