@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Bloquear la página de proyectos privados
+Disallow: /proyectos

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedCursor from "react-animated-cursor";
+import { Helmet } from "react-helmet";
 import Proyecto from "../Proyecto";
 import TitleSection from "../TitleSection";
 import imgBack from "../../assets/descarga.png";
@@ -169,8 +170,30 @@ Este proyecto demuestra mi capacidad para desarrollar soluciones completas desde
             id: 2,
             titulo: "Grupo Vimenca",
             categoria: "fullstack",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web corporativo con WordPress, integrando mapas interactivos con API personalizada para mostrar ubicaciones de oficinas.",
+            descripcion2: `Grupo Vimenca - Sitio Corporativo con Integración de Mapas
+
+Desarrollo de sitio web corporativo para Grupo Vimenca utilizando WordPress y Elementor Pro, con implementación avanzada de funcionalidades personalizadas.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+Integración de APIs y Mapas Interactivos
+
+Características Destacadas:
+• Sistema de Mapas Interactivo: Integración de mapas que consumen datos desde una API personalizada
+• Visualización Dinámica: Muestra ubicaciones e información detallada de todas las oficinas del grupo
+• Custom Post Types: Estructura de contenido personalizada para gestionar oficinas y servicios
+• Formularios PHP: Implementación de formularios de contacto personalizados con PHP
+• Diseño Responsive: Optimizado para todos los dispositivos
+• Optimización SEO: Configuración avanzada para motores de búsqueda
+
+Implementación Técnica:
+• Desarrollo de función PHP personalizada para consumir API de ubicaciones
+• JavaScript para renderizado dinámico de marcadores en mapa
+• Custom Fields para gestión de información de oficinas
+• Sistema de caché para optimizar llamadas a la API
+
+Este proyecto demuestra mi capacidad para extender WordPress más allá de sus funcionalidades básicas, integrando APIs externas y creando experiencias interactivas para los usuarios.`,
             img: imgGrupoVimenca,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -180,8 +203,28 @@ Este proyecto demuestra mi capacidad para desarrollar soluciones completas desde
             id: 3,
             titulo: "Adecc",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web corporativo desarrollado con WordPress y Elementor Pro, con diseño moderno y optimizado para conversión.",
+            descripcion2: `Adecc - Sitio Web Corporativo
+
+Desarrollo de sitio web corporativo para Adecc utilizando WordPress y Elementor Pro, enfocado en presentar servicios profesionales de manera efectiva.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Profesional: Interfaz moderna y limpia que refleja la identidad corporativa
+• Responsive Design: Adaptación perfecta a todos los dispositivos
+• Formularios de Contacto: Sistema de contacto integrado con validación
+• Optimización SEO: Configuración completa para mejor posicionamiento
+• Performance: Optimización de velocidad de carga y recursos
+
+Implementación:
+• Custom Post Types para gestión de servicios
+• Widgets personalizados con Elementor Pro
+• Integración de formularios con procesamiento PHP
+• Optimización de imágenes y recursos
+
+Este proyecto muestra mi capacidad para crear sitios corporativos profesionales que comunican efectivamente la propuesta de valor de la empresa.`,
             img: imgAdecc,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -232,8 +275,28 @@ Este proyecto demuestra mi capacidad para analizar problemas complejos, diseñar
             id: 5,
             titulo: "Banesco Internacional",
             categoria: "fullstack",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web bancario internacional desarrollado con WordPress, cumpliendo altos estándares de seguridad y profesionalismo.",
+            descripcion2: `Banesco Internacional - Sitio Web Bancario
+
+Desarrollo de sitio web para institución bancaria internacional, con enfoque en seguridad, profesionalismo y experiencia de usuario.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Bancario Profesional: Interfaz que transmite confianza y seguridad
+• Formularios Seguros: Implementación de formularios con validación y seguridad PHP
+• Responsive Design: Experiencia óptima en todos los dispositivos
+• Performance: Carga rápida y optimizada
+• SEO Optimizado: Configuración avanzada para visibilidad
+
+Funcionalidades Implementadas:
+• Secciones informativas de productos y servicios bancarios
+• Formularios de contacto con procesamiento seguro en PHP
+• Sistema de navegación intuitivo
+• Integración de elementos de confianza y certificaciones
+
+Este proyecto demuestra mi experiencia trabajando con sitios de alto nivel profesional en el sector financiero, donde la presentación y la confianza son fundamentales.`,
             img: imgBanescoInternacional,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -376,8 +439,28 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 8,
             titulo: "Lupard",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web comercial desarrollado con WordPress y Elementor Pro, con diseño moderno enfocado en la experiencia del usuario.",
+            descripcion2: `Lupard - Sitio Web Comercial
+
+Desarrollo de sitio web comercial para Lupard utilizando WordPress y Elementor Pro, con enfoque en presentación de productos y conversión.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Atractivo: Interfaz visual moderna que destaca productos/servicios
+• Responsive Design: Adaptación perfecta a móviles y tablets
+• Formularios de Contacto: Sistema de contacto con procesamiento PHP
+• Optimización SEO: Configuración para mejor posicionamiento
+• Performance Optimizada: Carga rápida de contenido
+
+Implementación:
+• Widgets personalizados con Elementor Pro
+• Secciones dinámicas para productos/servicios
+• Integración de formularios con validación
+• Optimización de imágenes y recursos multimedia
+
+Este proyecto refleja mi capacidad para crear sitios comerciales atractivos que generan engagement con los visitantes.`,
             img: imgLupard,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -387,8 +470,28 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 9,
             titulo: "Amadita Mujer",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web especializado desarrollado con WordPress y Elementor Pro, con diseño enfocado en audiencia femenina.",
+            descripcion2: `Amadita Mujer - Sitio Web Especializado
+
+Desarrollo de sitio web para Amadita Mujer utilizando WordPress y Elementor Pro, con diseño personalizado para conectar con la audiencia objetivo.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Personalizado: Estética adaptada al público objetivo
+• Responsive Design: Experiencia optimizada en todos los dispositivos
+• Formularios de Contacto: Sistema de contacto con procesamiento PHP
+• Navegación Intuitiva: Estructura clara y fácil de usar
+• Optimización SEO: Configuración para visibilidad en buscadores
+
+Implementación:
+• Layouts personalizados con Elementor Pro
+• Secciones de contenido dinámico
+• Formularios con validación PHP
+• Optimización de velocidad y rendimiento
+
+Este proyecto muestra mi capacidad para adaptar el diseño y funcionalidad a audiencias específicas, creando experiencias relevantes y atractivas.`,
             img: imgAmaditaMujer,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -398,8 +501,28 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 10,
             titulo: "Mujeres Solidarias",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web para organización sin fines de lucro, desarrollado con WordPress y Elementor Pro, enfocado en impacto social.",
+            descripcion2: `Mujeres Solidarias - Sitio Web de Organización Social
+
+Desarrollo de sitio web para organización sin fines de lucro Mujeres Solidarias, con WordPress y Elementor Pro, enfocado en comunicar su misión e impacto.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Empático: Interfaz que comunica la misión y valores de la organización
+• Secciones Informativas: Presentación clara de programas e iniciativas
+• Formularios de Contacto y Donación: Procesamiento PHP para múltiples formularios
+• Responsive Design: Accesibilidad desde cualquier dispositivo
+• Optimización SEO: Visibilidad para alcanzar más personas
+
+Implementación:
+• Custom Post Types para proyectos e iniciativas
+• Secciones de testimonios e historias de impacto
+• Formularios personalizados con PHP
+• Galería de imágenes optimizada
+
+Este proyecto refleja mi compromiso con causas sociales y mi capacidad para crear sitios que inspiran acción y participación comunitaria.`,
             img: imgMujeresSolidarias,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -409,8 +532,28 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 11,
             titulo: "Risk Managers",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web corporativo para consultoría en gestión de riesgos, desarrollado con WordPress y Elementor Pro.",
+            descripcion2: `Risk Managers - Sitio Web de Consultoría
+
+Desarrollo de sitio web corporativo para Risk Managers, consultora especializada en gestión de riesgos, utilizando WordPress y Elementor Pro.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Profesional: Interfaz que transmite confianza y experiencia
+• Presentación de Servicios: Estructura clara de servicios de consultoría
+• Formularios de Consulta: Sistema PHP para solicitudes de información
+• Responsive Design: Adaptación a todos los dispositivos
+• SEO Optimizado: Configuración para posicionamiento profesional
+
+Implementación:
+• Secciones de servicios y casos de éxito
+• Formularios de contacto con validación PHP
+• Elementos visuales para datos y estadísticas
+• Optimización de performance
+
+Este proyecto demuestra mi experiencia creando sitios para empresas de consultoría, donde la credibilidad y profesionalismo son esenciales.`,
             img: imgRiskManagers,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -420,8 +563,28 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 12,
             titulo: "A1 Clinic PR",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web para clínica médica en Puerto Rico, desarrollado con WordPress y Elementor Pro, enfocado en servicios de salud.",
+            descripcion2: `A1 Clinic PR - Sitio Web de Clínica Médica
+
+Desarrollo de sitio web para A1 Clinic en Puerto Rico, utilizando WordPress y Elementor Pro, con enfoque en servicios médicos y atención al paciente.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Médico Profesional: Interfaz limpia que transmite confianza
+• Información de Servicios: Presentación clara de servicios médicos
+• Sistema de Citas: Formularios PHP para solicitudes de citas
+• Responsive Design: Accesibilidad desde cualquier dispositivo
+• Optimización SEO: Visibilidad para pacientes locales
+
+Implementación:
+• Secciones de servicios médicos y especialidades
+• Formularios de contacto y citas con PHP
+• Integración de información de contacto y ubicación
+• Optimización de velocidad y accesibilidad
+
+Este proyecto muestra mi experiencia en el sector salud, donde la claridad de información y la facilidad de contacto son prioritarias.`,
             img: imgA1Clinic,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -431,8 +594,28 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 13,
             titulo: "Promedica",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web para institución médica, desarrollado con WordPress y Elementor Pro, enfocado en servicios de salud integral.",
+            descripcion2: `Promedica - Sitio Web de Institución Médica
+
+Desarrollo de sitio web para Promedica, institución de servicios médicos, utilizando WordPress y Elementor Pro con enfoque en experiencia del paciente.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Médico Profesional: Interfaz confiable y accesible
+• Catálogo de Servicios: Presentación completa de servicios médicos
+• Formularios de Contacto: Sistema PHP para consultas y citas
+• Responsive Design: Navegación óptima en todos los dispositivos
+• SEO para Salud: Optimización para búsquedas médicas locales
+
+Implementación:
+• Custom Post Types para servicios y especialidades
+• Formularios especializados con validación PHP
+• Secciones de información médica y prevención
+• Optimización de accesibilidad web
+
+Este proyecto refleja mi capacidad para crear sitios del sector salud que priorizan la información clara y el acceso fácil a servicios médicos.`,
             img: imgPromedica,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -442,8 +625,29 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 14,
             titulo: "Dexlitos X",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web comercial desarrollado con WordPress y Elementor Pro, con diseño moderno enfocado en productos.",
+            descripcion2: `Dexlitos X - Sitio Web Comercial
+
+Desarrollo de sitio web comercial para Dexlitos X utilizando WordPress y Elementor Pro, con enfoque en presentación de productos y conversión.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Comercial Atractivo: Interfaz visual moderna para destacar productos
+• Catálogo de Productos: Presentación organizada y atractiva
+• Formularios de Contacto: Sistema PHP para consultas de ventas
+• Responsive Design: Experiencia óptima en móviles y tablets
+• Optimización SEO: Configuración para ventas online
+
+Implementación:
+• Layouts personalizados con Elementor Pro
+• Secciones de productos con información detallada
+• Formularios de consulta con procesamiento PHP
+• Optimización de imágenes de productos
+• Integración de elementos de confianza
+
+Este proyecto demuestra mi capacidad para crear sitios comerciales que facilitan la decisión de compra del usuario.`,
             img: imgDexlitosX,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -453,8 +657,29 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 15,
             titulo: "Life Health MS",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web para servicios de salud y bienestar, desarrollado con WordPress y Elementor Pro.",
+            descripcion2: `Life Health MS - Sitio Web de Salud y Bienestar
+
+Desarrollo de sitio web para Life Health MS, enfocado en servicios de salud y bienestar, utilizando WordPress y Elementor Pro.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño de Salud y Bienestar: Interfaz que transmite confianza y profesionalismo
+• Servicios de Salud: Presentación clara de servicios médicos y de bienestar
+• Sistema de Contacto: Formularios PHP para consultas y citas
+• Responsive Design: Accesibilidad completa en todos los dispositivos
+• SEO Optimizado: Visibilidad en búsquedas de salud
+
+Implementación:
+• Secciones informativas de servicios médicos
+• Formularios de contacto con validación PHP
+• Integración de contenido educativo sobre salud
+• Optimización de velocidad y accesibilidad
+• Elementos visuales profesionales
+
+Este proyecto muestra mi experiencia creando sitios del sector salud que educan e informan mientras facilitan el contacto con profesionales.`,
             img: imgLifeHealthMS,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -464,8 +689,29 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
             id: 16,
             titulo: "Papel Domino",
             categoria: "frontend",
-            descripcion: "",
-            descripcion2: "",
+            descripcion: "Sitio web para empresa de suministros de oficina, desarrollado con WordPress y Elementor Pro.",
+            descripcion2: `Papel Domino - Sitio Web de Suministros
+
+Desarrollo de sitio web para Papel Domino, empresa de suministros de oficina, utilizando WordPress y Elementor Pro con enfoque comercial.
+
+Stack Técnico:
+WordPress, Elementor Pro, PHP, JavaScript, CSS
+
+Características Principales:
+• Diseño Comercial: Interfaz profesional para empresa B2B
+• Catálogo de Productos: Presentación de productos y servicios
+• Sistema de Consultas: Formularios PHP para solicitudes de cotización
+• Responsive Design: Experiencia completa en todos los dispositivos
+• SEO Empresarial: Optimización para clientes corporativos
+
+Implementación:
+• Secciones de productos y categorías
+• Formularios de cotización con procesamiento PHP
+• Información de contacto y atención al cliente
+• Optimización de carga y rendimiento
+• Elementos de confianza empresarial
+
+Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relaciones comerciales y las solicitudes de cotización.`,
             img: imgPapelDomino,
             skills: [iconWordpress, iconElementor, iconPhp, iconJavascript, iconCss],
             githubLink: null,
@@ -560,9 +806,14 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
     `;
 
     return (
-        <div style={backgroundStyle} className="relative w-full min-h-screen py-16 px-4">
-            <style>{cursorAnimations}</style>
-            <div id="sombra">
+        <>
+            <Helmet>
+                <meta name="robots" content="noindex, nofollow" />
+                <meta name="googlebot" content="noindex, nofollow" />
+            </Helmet>
+            <div style={backgroundStyle} className="relative w-full min-h-screen py-16 px-4">
+                <style>{cursorAnimations}</style>
+                <div id="sombra">
                 <AnimatedCursor
                     innerSize={8}
                     outerSize={35}
@@ -962,6 +1213,7 @@ Este proyecto representa uno de los backends más complejos que he desarrollado,
                 </AnimatePresence>
             </motion.section>
         </div>
+        </>
     );
 };
 
