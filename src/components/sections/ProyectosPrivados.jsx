@@ -890,9 +890,9 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1, margin: "-150px 0px" }}
                 >
-                    <TitleSection>Proyectos en Desarrollo</TitleSection>
+                    <TitleSection>Proyectos</TitleSection>
                     <p className="text-gray-300 text-lg mt-4">
-                        Trabajos actuales y proyectos en curso
+                        Portafolio de trabajos realizados
                     </p>
                 </motion.div>
 
