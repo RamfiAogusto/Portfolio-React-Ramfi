@@ -80,7 +80,7 @@ const Proyecto = memo(function Proyecto(props) {
             aria-label={`Proyecto: ${props.titulo}`}
         >
             {/* Contenedor de imagen optimizado */}
-            <div className="proyecto-image-container overflow-hidden rounded-xl relative mb-4">
+            <div className="proyecto-image-container overflow-hidden rounded-xl relative mb-4" style={props.imgBg ? { backgroundColor: props.imgBg } : undefined}>
                 {/* Overlay negro permanente - más oscuro */}
                 <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/95 via-black/70 to-transparent pointer-events-none z-10" aria-hidden="true"></div>
                 

@@ -128,6 +128,48 @@ function Proyectos() {
 
     const proyectos = [
         {
+            id: 8,
+            titulo: "VOID DISTRICT",
+            categoria: "frontend",
+            descripcion:
+                "Sitio web de marca de streetwear underground con drops limitados. Diseño editorial oscuro, sistema de crossfade en tarjetas de producto, navegación responsive con hamburger menu y lookbook fotográfico.",
+            descripcion2: `VOID DISTRICT — Sitio Web de Streetwear Underground
+
+Desarrollé el sitio web completo para VOID DISTRICT, una marca de streetwear con identidad underground, gótica y urbana. El proyecto fue construido desde cero con enfoque en la estética editorial oscura y la experiencia de usuario en mobile y desktop.
+
+Stack técnico:
+Next.js 15, React 19, TypeScript, Tailwind CSS v4, CSS custom properties
+
+Funcionalidades implementadas:
+- Hero editorial con imagen de producto y tipografía de display
+- Sistema de drops con tarjetas de producto y efecto crossfade frente/espalda al hover
+- Lookbook fotográfico en grid masonry con 3 ratios de imagen mezclados
+- Navegación responsive con hamburger menu y overlay fullscreen en mobile
+- Página de contacto con formulario
+- Sección Nosotros con identidad de marca
+- Smooth scroll en todo el sitio
+- Export estático para deployment sin servidor
+
+Desafíos técnicos resueltos:
+- Especificidad CSS: propiedades inline en JSX bloquean media queries — migración a clases CSS puras
+- Hero sin espacio en blanco en desktop: padding-top en la sección vs. en la columna de contenido
+- Contenido oculto bajo nav fija en mobile: padding-top mínimo calculado sobre la altura del nav
+- Crossfade de imágenes: posición absoluta + transición de opacidad para reemplazo suave
+
+Herramientas:
+Vercel para deployment, diseño propio sin framework de UI`,
+            img: VoidDistrict,
+            imgBg: "#000000",
+            skills: [
+                iconReact,
+                iconTailwind,
+                iconTypescript,
+                iconGit,
+            ],
+            githubLink: null,
+            siteLink: "https://voiddistrict.vercel.app/",
+        },
+        {
             id: 1,
             titulo: "Sistema de Reservas para Barberías",
             categoria: "fullstack",
@@ -180,47 +222,6 @@ Un proyecto completo que demuestra la capacidad de desarrollar soluciones escala
             ],
             githubLink: null,
             siteLink: "https://reservas-barberia-ruddy.vercel.app",
-        },
-        {
-            id: 8,
-            titulo: "VOID DISTRICT",
-            categoria: "frontend",
-            descripcion:
-                "Sitio web de marca de streetwear underground con drops limitados. Diseño editorial oscuro, sistema de crossfade en tarjetas de producto, navegación responsive con hamburger menu y lookbook fotográfico.",
-            descripcion2: `VOID DISTRICT — Sitio Web de Streetwear Underground
-
-Desarrollé el sitio web completo para VOID DISTRICT, una marca de streetwear con identidad underground, gotica y urbana. El proyecto fue construido desde cero con enfoque en la estética editorial oscura y la experiencia de usuario en mobile y desktop.
-
-Stack técnico:
-Next.js 15, React 19, TypeScript, Tailwind CSS v4, CSS custom properties
-
-Funcionalidades implementadas:
-- Hero editorial con imagen de producto y tipografía de display
-- Sistema de drops con tarjetas de producto y efecto crossfade frente/espalda al hover
-- Lookbook fotográfico en grid masonry con 3 ratios de imagen mezclados
-- Navegación responsiva con hamburger menu y overlay fullscreen en mobile
-- Página de contacto con formulario
-- Sección Nosotros con identidad de marca
-- Smooth scroll en todo el sitio
-- Export estático (output: "export") para deployment sin servidor
-
-Desafíos técnicos resueltos:
-- Especificidad CSS: propiedades inline en JSX bloquean media queries — migración a clases CSS puras
-- Hero sin espacio en blanco en desktop: padding-top en la sección vs. en la columna de contenido
-- Contenido oculto bajo nav fija en mobile: padding-top mínimo calculado sobre la altura del nav
-- Crossfade de imágenes: posición absoluta + transición de opacidad para reemplazo suave
-
-Herramientas:
-GitHub Pages / Vercel para deployment, diseño propio sin framework de UI`,
-            img: VoidDistrict,
-            skills: [
-                iconReact,
-                iconTailwind,
-                iconTypescript,
-                iconGit,
-            ],
-            githubLink: "https://github.com/RamfiAogusto/ProyectoStreatware1",
-            siteLink: null,
         },
         {
             id: 2,
@@ -515,6 +516,7 @@ Tailwind CSS se empleó para estilizar la aplicación de manera eficiente, mient
                                 githubLink={proyecto.githubLink}
                                 siteLink={proyecto.siteLink}
                                 img={proyecto.img}
+                                imgBg={proyecto.imgBg}
                                 onVerMasClick={() => setSelectedId(proyecto.id)}
                             />
                         </motion.div>
