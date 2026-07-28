@@ -1,4 +1,3 @@
-import React from "react";
 import imgMoon from "../../assets/to_the_moon.svg";
 import TitleSection from "../TitleSection";
 import { motion } from "framer-motion";
@@ -102,10 +101,11 @@ function Quiensoy() {
             viewport={{ once: true, amount: 0.1, margin: "-100px 0px" }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <img 
-              src={imgMoon} 
-              className="w-full about-image" 
+            <img
+              src={imgMoon}
+              className="w-full about-image"
               alt="To the moon illustration"
+              loading="lazy"
             />
             
             {/* Decorative elements */}

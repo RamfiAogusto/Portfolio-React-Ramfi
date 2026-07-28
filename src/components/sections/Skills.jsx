@@ -1,5 +1,3 @@
-import React from "react";
-import iconApi from "../../assets/skills/api.png";
 import iconBootstrap from "../../assets/skills/bootstrap (4).svg";
 import iconCss from "../../assets/skills/CSS.png";
 import iconExpress from "../../assets/skills/expressjs_dark.svg";
@@ -51,48 +49,51 @@ function Skills() {
                         <h3 className="text-lg font-bold mt-2">FRONT-END</h3>
                         <ul>
                             <li>
-                                <img src={iconHtml} className="skill_img" />
+                                <img src={iconHtml} className="skill_img" loading="lazy" />
                                 <p className="skill_name">HTML</p>
                             </li>
                             <li>
                                 <img
                                     src={iconJavascript}
                                     className="skill_img"
+                                    loading="lazy"
                                 />
                                 <p className="skill_name">JavaScript</p>
                             </li>
                             <li>
-                                <img src={iconCss} className="skill_img" />
+                                <img src={iconCss} className="skill_img" loading="lazy" />
                                 <p className="skill_name">CSS</p>
                             </li>
                             <li>
-                                <img src={iconReact} className="skill_img" />
+                                <img src={iconReact} className="skill_img" loading="lazy" />
                                 <p className="skill_name">ReactJS</p>
                             </li>
                             <li>
-                                <img src={iconTailwind} className="skill_img" />
+                                <img src={iconTailwind} className="skill_img" loading="lazy" />
                                 <p className="skill_name">TailwindCSS</p>
                             </li>
                             <li>
                                 <img
                                     src={iconBootstrap}
                                     className="skill_img"
+                                    loading="lazy"
                                 />
                                 <p className="skill_name">Bootstrap</p>
                             </li>
                             <li>
-                                <img src={iconFigma} className="skill_img" />
+                                <img src={iconFigma} className="skill_img" loading="lazy" />
                                 <p className="skill_name">Figma</p>
                             </li>
                             <li>
                                 <img
                                     src={iconWordpress}
                                     className="skill_img"
+                                    loading="lazy"
                                 />
                                 <p className="skill_name">WordPress</p>
                             </li>
                             <li>
-                                <img src={iconElementor} className="skill_img" />
+                                <img src={iconElementor} className="skill_img" loading="lazy" />
                                 <p className="skill_name">Elementor</p>
                             </li>
                         </ul>
@@ -101,32 +102,32 @@ function Skills() {
                         <h3 className="text-lg font-bold mt-2">BACK-END</h3>
                         <ul>
                             <li>
-                                <img src={iconNodejs} className="skill_img" />
+                                <img src={iconNodejs} className="skill_img" loading="lazy" />
                                 <p className="skill_name">NodeJs</p>
                             </li>
                             <li>
-                                <img src={iconExpress} className="skill_img" />
+                                <img src={iconExpress} className="skill_img" loading="lazy" />
                                 <p className="skill_name">ExpressJs</p>
                             </li>
                             <li>
-                                <img src={iconMysql} className="skill_img" />
+                                <img src={iconMysql} className="skill_img" loading="lazy" />
                                 <p className="skill_name">MySQL</p>
                             </li>
                             <li>
-                                <img src={iconMongo} className="skill_img" />
+                                <img src={iconMongo} className="skill_img" loading="lazy" />
                                 <p className="skill_name">MongoDB</p>
                             </li>
-                            
+
                             <li>
-                                <img src={iconSupabase} className="skill_img" />
+                                <img src={iconSupabase} className="skill_img" loading="lazy" />
                                 <p className="skill_name">Supabase</p>
                             </li>
                             <li>
-                                <img src={iconPhp} className="skill_img" />
+                                <img src={iconPhp} className="skill_img" loading="lazy" />
                                 <p className="skill_name">PHP</p>
                             </li>
                             <li>
-                                <img src={iconPython} className="skill_img" />
+                                <img src={iconPython} className="skill_img" loading="lazy" />
                                 <p className="skill_name">Python</p>
                             </li>
 
@@ -136,37 +137,38 @@ function Skills() {
                         <h3 className="text-lg font-bold mt-2">OTROS</h3>
                         <ul>
                             <li>
-                                <img src={iconGit} className="skill_img" />
+                                <img src={iconGit} className="skill_img" loading="lazy" />
                                 <p className="skill_name">Git</p>
                             </li>
                             <li>
-                                <img src={iconGithub} className="skill_img" />
+                                <img src={iconGithub} className="skill_img" loading="lazy" />
                                 <p className="skill_name">GitHub</p>
                             </li>
                             <li>
-                                <img src={iconVscode} className="skill_img" />
+                                <img src={iconVscode} className="skill_img" loading="lazy" />
                                 <p className="skill_name">VScode</p>
                             </li>
                             <li>
-                                <img src={iconTerminal} className="skill_img" />
+                                <img src={iconTerminal} className="skill_img" loading="lazy" />
                                 <p className="skill_name">Terminal</p>
                             </li>
                             <li>
-                                <img src={iconSql} className="skill_img" />
+                                <img src={iconSql} className="skill_img" loading="lazy" />
                                 <p className="skill_name">SQL</p>
                             </li>
                             <li>
-                                <img src={iconSql} className="skill_img" />
+                                <img src={iconSql} className="skill_img" loading="lazy" />
                                 <p className="skill_name">API</p>
                             </li>
                             <li>
-                                <img src={iconVercel} className="skill_img" />
+                                <img src={iconVercel} className="skill_img" loading="lazy" />
                                 <p className="skill_name">Vercel</p>
                             </li>
                             <li>
                                 <img
                                     src={iconReactRouter}
                                     className="skill_img"
+                                    loading="lazy"
                                 />
                                 <p className="skill_name">React Router</p>
                             </li>

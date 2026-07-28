@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 import TitleSection from "../TitleSection";
 import { motion } from "framer-motion";
 
@@ -87,10 +87,11 @@ const orbVariants1 = {
   animate: {
     scale: [1, 1.3, 1],
     opacity: [0.1, 0.3, 0.1],
+    rotate: [0, 360],
     transition: {
-      duration: 12,
-      repeat: Infinity,
-      ease: "linear"
+      scale: { duration: 12, repeat: Infinity, ease: "linear" },
+      opacity: { duration: 12, repeat: Infinity, ease: "linear" },
+      rotate: { duration: 30, repeat: Infinity, ease: "linear" }
     }
   }
 };
@@ -99,11 +100,11 @@ const orbVariants2 = {
   animate: {
     scale: [1, 1.5, 1],
     opacity: [0.1, 0.2, 0.1],
+    rotate: [0, 360],
     transition: {
-      duration: 15,
-      repeat: Infinity,
-      ease: "linear",
-      delay: 2
+      scale: { duration: 15, repeat: Infinity, ease: "linear", delay: 2 },
+      opacity: { duration: 15, repeat: Infinity, ease: "linear", delay: 2 },
+      rotate: { duration: 30, repeat: Infinity, ease: "linear" }
     }
   }
 };
@@ -141,15 +142,15 @@ const Experiencia = memo(function Experiencia() {
       variants={sectionVariants}
     >
       {/* Elementos decorativos animados optimizados */}
-      <motion.div 
-        className="absolute -z-10 w-32 h-32 rounded-full bg-[var(--primary-light)] opacity-20 blur-xl decorative-orb"
+      <motion.div
+        className="absolute -z-10 w-32 h-32 rounded-full bg-[var(--primary-light)] opacity-20 blur-xl"
         style={{ top: '15%', left: '5%' }}
         variants={orbVariants1}
         animate="animate"
       />
-      
-      <motion.div 
-        className="absolute -z-10 w-40 h-40 rounded-full bg-[var(--primary-light)] opacity-20 blur-xl decorative-orb"
+
+      <motion.div
+        className="absolute -z-10 w-40 h-40 rounded-full bg-[var(--primary-light)] opacity-20 blur-xl"
         style={{ bottom: '10%', right: '5%' }}
         variants={orbVariants2}
         animate="animate"

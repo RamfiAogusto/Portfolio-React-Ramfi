@@ -150,12 +150,6 @@ Funcionalidades implementadas:
 - Smooth scroll en todo el sitio
 - Export estático para deployment sin servidor
 
-Desafíos técnicos resueltos:
-- Especificidad CSS: propiedades inline en JSX bloquean media queries — migración a clases CSS puras
-- Hero sin espacio en blanco en desktop: padding-top en la sección vs. en la columna de contenido
-- Contenido oculto bajo nav fija en mobile: padding-top mínimo calculado sobre la altura del nav
-- Crossfade de imágenes: posición absoluta + transición de opacidad para reemplazo suave
-
 Herramientas:
 Vercel para deployment, diseño propio sin framework de UI`,
             img: VoidDistrict,

@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 import GroupButons from "../GroupButons";
 import imgPerfil from "../../assets/recorted.png";
 import { motion } from "framer-motion";
@@ -57,7 +57,11 @@ const borderVariants = {
     animate: {
         scale: [1, 1.1, 1],
         opacity: [0.2, 0.5, 0.2],
-        borderWidth: ['2px', '4px', '2px'],
+        boxShadow: [
+            '0 0 0px 0px rgba(255,255,255,0.5)',
+            '0 0 0px 3px rgba(255,255,255,0.5)',
+            '0 0 0px 0px rgba(255,255,255,0.5)'
+        ],
         transition: {
             duration: 3,
             repeat: Infinity,
@@ -141,19 +145,8 @@ const dotVariants = (i) => ({
     }
 });
 
-const colorVariants = {
-    animate: {
-        color: [
-            "rgb(156, 163, 175)", 
-            "rgb(13, 158, 216)", 
-            "rgb(156, 163, 175)"
-        ],
-        transition: { duration: 3, repeat: Infinity }
-    }
-};
-
 // Generar partículas decorativas fuera del componente
-const particles = Array.from({ length: 12 }, (_, i) => ({
+const particles = Array.from({ length: 6 }, (_, i) => ({
     id: i,
     size: Math.random() * 8 + 4,
     x: Math.random() * 100,
@@ -182,21 +175,16 @@ const Hero = memo(function Hero() {
                 />
             ))}
 
-            {/* Fondo animado optimizado */}
-            <motion.div 
-                className="absolute inset-0 bg-gradient-to-br from-[rgba(13,158,216,0.03)] to-transparent z-0"
+            {/* Fondo animado optimizado: transform (x/y) en vez de animar el string de background */}
+            <motion.div
+                className="absolute -inset-1/4 z-0 pointer-events-none"
                 style={{
+                    background: 'radial-gradient(circle, rgba(13,158,216,0.05) 0%, rgba(0,0,0,0) 70%)',
                     maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)'
+                    WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)',
                 }}
-                animate={{ 
-                    background: [
-                        'radial-gradient(circle at 20% 30%, rgba(13,158,216,0.05) 0%, rgba(0,0,0,0) 70%)',
-                        'radial-gradient(circle at 80% 70%, rgba(13,158,216,0.05) 0%, rgba(0,0,0,0) 70%)',
-                        'radial-gradient(circle at 20% 30%, rgba(13,158,216,0.05) 0%, rgba(0,0,0,0) 70%)'
-                    ]
-                }}
-                transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: ['-15%', '15%', '-15%'], y: ['-10%', '10%', '-10%'] }}
+                transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
             />
 
             <div className="hero min-h-screen overflow-hidden mb-10 md:mb-0 relative z-10">
@@ -348,7 +336,7 @@ const Hero = memo(function Hero() {
                                     />
                                     
                                     {/* Partículas brillantes optimizadas */}
-                                    {[...Array(6)].map((_, i) => (
+                                    {[...Array(3)].map((_, i) => (
                                         <motion.div
                                             key={i}
                                             className="absolute top-0 h-full w-1 rounded-full bg-white"
@@ -388,21 +376,29 @@ const Hero = memo(function Hero() {
                             transition={{ delay: 0.9, duration: 0.7 }}
                         >
                             <h2 className="text-2xl font-medium text-gray-300 flex items-center">
-                                <motion.span
-                                    variants={colorVariants}
-                                    animate="animate"
-                                    className="mr-2"
-                                >
+                                <span className="relative inline-block mr-2 text-gray-400">
                                     &lt;
-                                </motion.span>
+                                    <motion.span
+                                        className="absolute inset-0 text-[var(--primary)]"
+                                        aria-hidden="true"
+                                        animate={{ opacity: [0, 1, 0] }}
+                                        transition={{ duration: 3, repeat: Infinity }}
+                                    >
+                                        &lt;
+                                    </motion.span>
+                                </span>
                                 Creando experiencias web
-                                <motion.span
-                                    variants={colorVariants}
-                                    animate="animate"
-                                    className="ml-2"
-                                >
+                                <span className="relative inline-block ml-2 text-gray-400">
                                     /&gt;
-                                </motion.span>
+                                    <motion.span
+                                        className="absolute inset-0 text-[var(--primary)]"
+                                        aria-hidden="true"
+                                        animate={{ opacity: [0, 1, 0] }}
+                                        transition={{ duration: 3, repeat: Infinity }}
+                                    >
+                                        /&gt;
+                                    </motion.span>
+                                </span>
                             </h2>
                         </motion.div>
 

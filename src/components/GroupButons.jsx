@@ -1,4 +1,3 @@
-import React from "react";
 /* import iconInsta from "../assets/icons/instagram_dark.svg"; */
 import iconLinkedin from "../assets/icons/linkedin.svg";
 import iconGithub from "../assets/icons/github.svg";
@@ -35,7 +34,7 @@ function GroupButons() {
                 damping: 20
             }
         },
-        hover: { 
+        hover: {
             scale: 1.1,
             rotate: 5,
             transition: {
@@ -43,6 +42,20 @@ function GroupButons() {
                 stiffness: 400,
                 damping: 10
             }
+        }
+    };
+
+    // Glow de fondo: solo corre mientras el <motion.a> padre está en hover (hereda "hover" via whileHover del padre)
+    const glowPulseVariants = {
+        rest: { opacity: 0 },
+        hover: {
+            opacity: 1,
+            background: [
+                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)',
+                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 70%)',
+                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)'
+            ],
+            transition: { duration: 2, repeat: Infinity }
         }
     };
 
@@ -124,15 +137,9 @@ function GroupButons() {
                     />
                     
                     <motion.div
-                        className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[rgba(255,255,255,0.1)] z-[-1]"
-                        animate={{ 
-                            background: [
-                                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)',
-                                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 70%)',
-                                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)'
-                            ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
+                        className="absolute inset-0 bg-[rgba(255,255,255,0.1)] z-[-1]"
+                        variants={glowPulseVariants}
+                        initial="rest"
                     />
                     
                     <motion.div
@@ -143,6 +150,7 @@ function GroupButons() {
                             src={iconLinkedin}
                             alt="LinkedIn"
                             className="w-full h-full object-contain"
+                            loading="lazy"
                         />
                     </motion.div>
                 </motion.a>
@@ -163,15 +171,9 @@ function GroupButons() {
                     />
                     
                     <motion.div
-                        className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[rgba(255,255,255,0.1)] z-[-1]"
-                        animate={{ 
-                            background: [
-                                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)',
-                                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 70%)',
-                                'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)'
-                            ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
+                        className="absolute inset-0 bg-[rgba(255,255,255,0.1)] z-[-1]"
+                        variants={glowPulseVariants}
+                        initial="rest"
                     />
                     
                     <motion.div
@@ -182,6 +184,7 @@ function GroupButons() {
                             src={iconGithub}
                             alt="GitHub"
                             className="w-full h-full object-contain"
+                            loading="lazy"
                         />
                     </motion.div>
                 </motion.a>

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import iconInsta from "../../assets/icons/instagram_dark.svg";
+import { useState } from "react";
 import iconLink from "../../assets/icons/linkedin.svg";
 import iconGit from "../../assets/icons/github.svg";
 import iconCopy from "../../assets/icons/copy-svgrepo-com.svg";
@@ -215,6 +214,7 @@ function Contactos() {
                                             src={iconLink}
                                             alt="LinkedIn"
                                             className="w-6 h-6"
+                                            loading="lazy"
                                         />
                                     </motion.a>
                                     
@@ -233,6 +233,7 @@ function Contactos() {
                                             src={iconGit}
                                             alt="GitHub"
                                             className="w-6 h-6"
+                                            loading="lazy"
                                         />
                                     </motion.a>
                                 </div>
@@ -257,6 +258,7 @@ function Contactos() {
                                             src={iconCopy}
                                             alt="Copiar"
                                             className="w-5 h-5"
+                                            loading="lazy"
                                         />
                                     </motion.button>
                                     

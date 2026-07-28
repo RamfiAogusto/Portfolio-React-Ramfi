@@ -129,6 +129,7 @@ const Proyecto = memo(function Proyecto(props) {
                         variants={skillItemVariants}
                         whileHover="hover"
                         role="listitem"
+                        loading="lazy"
                     />
                 ))}
             </div>
@@ -161,10 +162,11 @@ const Proyecto = memo(function Proyecto(props) {
                         onClick={handleStopPropagation}
                         aria-label={`Ver código fuente de ${props.titulo} en GitHub`}
                     >
-                        <img 
-                            src={imgGithub} 
+                        <img
+                            src={imgGithub}
                             alt="GitHub"
                             className="h-5 w-5"
+                            loading="lazy"
                         />
                     </motion.a>
                 )}
