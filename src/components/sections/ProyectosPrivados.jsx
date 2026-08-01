@@ -840,7 +840,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                                     className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                                         currentCategory === categoria.id
                                             ? "bg-[var(--primary)] text-black shadow-lg shadow-[var(--primary)]/30"
-                                            : "bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.3)] hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.5)]"
+                                            : "bg-primary/10 text-white border border-primary/30 hover:bg-primary/20 hover:border-primary/50"
                                     }`}
                                     whileHover={{ 
                                         scale: 1.05,
@@ -906,7 +906,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4, delay: 0.2 }}
                             >
-                                <div className="flex items-center gap-2 bg-[rgba(4,7,10,0.8)] border border-[rgba(13,158,216,0.2)] rounded-full p-2">
+                                <div className="flex items-center gap-2 bg-[rgba(4,7,10,0.8)] border border-primary/20 rounded-full p-2">
                                     {/* Botón Anterior */}
                                     <motion.button
                                         onClick={() => handlePageChange(currentPage - 1)}
@@ -914,7 +914,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                                         className={`px-2 sm:px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-1 sm:gap-2 ${
                                             currentPage === 1
                                                 ? "opacity-50 cursor-not-allowed"
-                                                : "hover:bg-[rgba(13,158,216,0.1)] hover:text-[var(--primary)]"
+                                                : "hover:bg-primary/10 hover:text-[var(--primary)]"
                                         }`}
                                         whileHover={currentPage !== 1 ? { scale: 1.05 } : {}}
                                         whileTap={currentPage !== 1 ? { scale: 0.95 } : {}}
@@ -934,7 +934,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                                                 className={`w-10 h-10 rounded-full font-medium transition-all duration-200 ${
                                                     currentPage === page
                                                         ? "bg-[var(--primary)] text-black"
-                                                        : "hover:bg-[rgba(13,158,216,0.1)] hover:text-[var(--primary)]"
+                                                        : "hover:bg-primary/10 hover:text-[var(--primary)]"
                                                 }`}
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.9 }}
@@ -951,7 +951,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                                         className={`px-2 sm:px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-1 sm:gap-2 ${
                                             currentPage === totalPages
                                                 ? "opacity-50 cursor-not-allowed"
-                                                : "hover:bg-[rgba(13,158,216,0.1)] hover:text-[var(--primary)]"
+                                                : "hover:bg-primary/10 hover:text-[var(--primary)]"
                                         }`}
                                         whileHover={currentPage !== totalPages ? { scale: 1.05 } : {}}
                                         whileTap={currentPage !== totalPages ? { scale: 0.95 } : {}}
@@ -991,7 +991,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                             />
                             <div className="fixed inset-0 flex items-center justify-center z-50">
                                 <motion.div
-                                    className="w-11/12 md:w-4/5 lg:w-3/4 max-h-[85vh] p-6 rounded-xl bg-[rgba(4,7,10,0.95)] border border-[rgba(13,158,216,0.3)] shadow-2xl overflow-auto"
+                                    className="w-11/12 md:w-4/5 lg:w-3/4 max-h-[85vh] p-6 rounded-xl bg-[rgba(4,7,10,0.95)] border border-primary/30 shadow-2xl overflow-auto"
                                     ref={containerRef}
                                     variants={modalVariants}
                                     initial="hidden"
@@ -1053,7 +1053,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                                                                     href={proyecto.siteLink}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className="flex-1 py-3 px-4 bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.5)] rounded-lg text-center font-medium transition-all"
+                                                                    className="flex-1 py-3 px-4 bg-primary/10 text-white border border-primary/50 rounded-lg text-center font-medium transition-all"
                                                                     whileHover={{ 
                                                                         backgroundColor: "rgba(13,158,216,0.2)",
                                                                         boxShadow: "0 0 15px rgba(13,158,216,0.3)"
@@ -1068,7 +1068,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                                                                     href={proyecto.githubLink}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className="py-3 px-4 bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.5)] rounded-lg flex items-center justify-center transition-all"
+                                                                    className="py-3 px-4 bg-primary/10 text-white border border-primary/50 rounded-lg flex items-center justify-center transition-all"
                                                                     whileHover={{ 
                                                                         backgroundColor: "rgba(13,158,216,0.2)",
                                                                         boxShadow: "0 0 15px rgba(13,158,216,0.3)"
@@ -1102,7 +1102,7 @@ Este proyecto refleja mi capacidad para crear sitios B2B que facilitan las relac
                                                     </motion.div>
                                                     
                                                     <motion.button
-                                                        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-[rgba(13,158,216,0.2)] border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white shadow-lg shadow-[var(--primary)]/30 transition-all duration-300 z-50"
+                                                        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-primary/20 border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white shadow-lg shadow-[var(--primary)]/30 transition-all duration-300 z-50"
                                                         onClick={() => setSelectedId(null)}
                                                         whileHover={{ 
                                                             scale: 1.15,

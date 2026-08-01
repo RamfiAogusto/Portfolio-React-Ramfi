@@ -70,7 +70,7 @@ const Proyecto = memo(function Proyecto(props) {
 
     return (
         <motion.article
-            className="proyecto-card group bg-[rgba(4,7,10,0.85)] border border-[rgba(13,158,216,0.15)] rounded-2xl p-5 shadow-lg hover:border-[rgba(13,158,216,0.3)] transition-all duration-300"
+            className="proyecto-card group bg-[rgba(4,7,10,0.85)] border border-primary/15 rounded-2xl p-5 shadow-lg hover:border-primary/30 transition-all duration-300"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
@@ -143,7 +143,7 @@ const Proyecto = memo(function Proyecto(props) {
                         rel="noopener noreferrer"
                         variants={buttonVariants}
                         whileHover="hover"
-                        className="site-button flex-1 bg-[rgba(13,158,216,0.1)] text-white border border-[rgba(13,158,216,0.4)] rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.6)] text-center focus:outline-none focus:ring-2 focus:ring-[rgba(13,158,216,0.5)] min-h-[44px] flex items-center justify-center"
+                        className="site-button flex-1 bg-primary/10 text-white border border-primary/40 rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 hover:bg-primary/20 hover:border-primary/60 text-center focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[44px] flex items-center justify-center"
                         onClick={handleStopPropagation}
                         aria-label={`Visitar sitio de ${props.titulo}`}
                     >
@@ -158,7 +158,7 @@ const Proyecto = memo(function Proyecto(props) {
                         rel="noopener noreferrer"
                         variants={buttonVariants}
                         whileHover="hover"
-                        className="github-button bg-[rgba(13,158,216,0.1)] border border-[rgba(13,158,216,0.4)] rounded-lg px-4 py-3 flex items-center justify-center transition-all duration-200 hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.6)] focus:outline-none focus:ring-2 focus:ring-[rgba(13,158,216,0.5)] min-h-[44px] min-w-[44px]"
+                        className="github-button bg-primary/10 border border-primary/40 rounded-lg px-4 py-3 flex items-center justify-center transition-all duration-200 hover:bg-primary/20 hover:border-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[44px] min-w-[44px]"
                         onClick={handleStopPropagation}
                         aria-label={`Ver código fuente de ${props.titulo} en GitHub`}
                     >
@@ -172,7 +172,7 @@ const Proyecto = memo(function Proyecto(props) {
                 )}
                 
                 {!props.siteLink && !props.githubLink && (
-                    <div className="w-full py-3 px-4 bg-[rgba(13,158,216,0.05)] text-gray-400 border border-[rgba(13,158,216,0.2)] rounded-lg text-center text-sm">
+                    <div className="w-full py-3 px-4 bg-primary/5 text-gray-400 border border-primary/20 rounded-lg text-center text-sm">
                         Proyecto Backend
                     </div>
                 )}

@@ -281,7 +281,7 @@ const Hero = memo(function Hero() {
                             className="mb-4"
                         >
                             <motion.span 
-                                className="inline-block px-4 py-1 rounded-full bg-[rgba(13,158,216,0.1)] text-[var(--primary)] text-sm font-medium border border-[rgba(13,158,216,0.3)] mb-4"
+                                className="inline-block px-4 py-1 rounded-full bg-primary/10 text-[var(--primary)] text-sm font-medium border border-primary/30 mb-4"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3, duration: 0.5 }}
@@ -430,7 +430,7 @@ const Hero = memo(function Hero() {
 
             {/* Líneas decorativas optimizadas */}
             <motion.div 
-                className="absolute bottom-10 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[rgba(13,158,216,0.3)] to-transparent z-10"
+                className="absolute bottom-10 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent z-10"
                 initial={{ scaleX: 0, opacity: 0 }}
                 animate={{ scaleX: 1, opacity: 1 }}
                 transition={{ delay: 1.5, duration: 1 }}

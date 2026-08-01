@@ -112,7 +112,7 @@ function Contactos() {
                         variants={itemVariants}
                     >
                         <motion.div 
-                            className=" backdrop-blur-sm border border-[rgba(13,158,216,0.2)] rounded-xl p-8 shadow-lg"
+                            className=" backdrop-blur-sm border border-primary/20 rounded-xl p-8 shadow-lg"
                             whileHover={{ 
                                 boxShadow: "0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(13, 158, 216, 0.4)",
                                 borderColor: "rgba(13, 158, 216, 0.5)",
@@ -136,7 +136,7 @@ function Contactos() {
                                         type="text"
                                         name="name"
                                         placeholder="Ingrese su nombre"
-                                        className="w-full bg-[rgba(13,158,216,0.05)] outline-none border border-[rgba(13,158,216,0.3)] rounded-lg h-12 text-white p-3 box-border text-base transition-all duration-300 focus:border-[var(--primary)] focus:shadow-[0_0_8px_rgba(13,158,216,0.5)]"
+                                        className="w-full bg-primary/5 outline-none border border-primary/30 rounded-lg h-12 text-white p-3 box-border text-base transition-all duration-300 focus:border-[var(--primary)] focus:shadow-[0_0_8px_rgba(13,158,216,0.5)]"
                                         required
                                     />
                                 </motion.div>
@@ -150,7 +150,7 @@ function Contactos() {
                                         type="email"
                                         name="email"
                                         placeholder="Ingrese su correo"
-                                        className="w-full bg-[rgba(13,158,216,0.05)] outline-none border border-[rgba(13,158,216,0.3)] rounded-lg h-12 text-white p-3 box-border text-base transition-all duration-300 focus:border-[var(--primary)] focus:shadow-[0_0_8px_rgba(13,158,216,0.5)]"
+                                        className="w-full bg-primary/5 outline-none border border-primary/30 rounded-lg h-12 text-white p-3 box-border text-base transition-all duration-300 focus:border-[var(--primary)] focus:shadow-[0_0_8px_rgba(13,158,216,0.5)]"
                                         required
                                     />
                                 </motion.div>
@@ -162,7 +162,7 @@ function Contactos() {
                                     <label className="block text-gray-300 mb-2 font-medium">Mensaje</label>
                                     <textarea
                                         name="message"
-                                        className="w-full bg-[rgba(13,158,216,0.05)] outline-none border border-[rgba(13,158,216,0.3)] rounded-lg h-40 text-white p-3 box-border text-base transition-all duration-300 focus:border-[var(--primary)] focus:shadow-[0_0_8px_rgba(13,158,216,0.5)] resize-none"
+                                        className="w-full bg-primary/5 outline-none border border-primary/30 rounded-lg h-40 text-white p-3 box-border text-base transition-all duration-300 focus:border-[var(--primary)] focus:shadow-[0_0_8px_rgba(13,158,216,0.5)] resize-none"
                                         placeholder="Ingrese su mensaje"
                                         required
                                     ></textarea>
@@ -171,7 +171,7 @@ function Contactos() {
                                 <motion.button
                                     type="submit"
                                     id="button-enviar"
-                                    className="px-6 py-3 text-base font-semibold bg-[rgba(13,158,216,0.1)] rounded-lg border border-[rgba(13,158,216,0.5)] text-white transition-all duration-300 hover:bg-[rgba(13,158,216,0.2)] hover:shadow-[0_0_15px_rgba(13,158,216,0.4)] hover:border-[rgba(13,158,216,0.8)]"
+                                    className="px-6 py-3 text-base font-semibold bg-primary/10 rounded-lg border border-primary/50 text-white transition-all duration-300 hover:bg-primary/20 hover:shadow-[0_0_15px_rgba(13,158,216,0.4)] hover:border-primary/80"
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     variants={itemVariants}
@@ -187,7 +187,7 @@ function Contactos() {
                         variants={itemVariants}
                     >
                         <motion.div 
-                            className=" backdrop-blur-sm border border-[rgba(13,158,216,0.2)] rounded-xl p-8 shadow-lg"
+                            className=" backdrop-blur-sm border border-primary/20 rounded-xl p-8 shadow-lg"
                             whileHover={{ 
                                 boxShadow: "0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(13, 158, 216, 0.4)",
                                 borderColor: "rgba(13, 158, 216, 0.5)",
@@ -203,7 +203,7 @@ function Contactos() {
                                         href="https://www.linkedin.com/in/ramfi-aogusto-de-la-cruz-geraldino-aa64b5272"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-12 h-12 flex items-center justify-center bg-[rgba(13,158,216,0.1)] rounded-lg border border-[rgba(13,158,216,0.3)] transition-all duration-300 hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.6)]"
+                                        className="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg border border-primary/30 transition-all duration-300 hover:bg-primary/20 hover:border-primary/60"
                                         whileHover={{ 
                                             y: -5,
                                             boxShadow: "0 5px 15px rgba(13, 158, 216, 0.3)"
@@ -222,7 +222,7 @@ function Contactos() {
                                         href="https://github.com/RamfiAogusto"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-12 h-12 flex items-center justify-center bg-[rgba(13,158,216,0.1)] rounded-lg border border-[rgba(13,158,216,0.3)] transition-all duration-300 hover:bg-[rgba(13,158,216,0.2)] hover:border-[rgba(13,158,216,0.6)]"
+                                        className="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg border border-primary/30 transition-all duration-300 hover:bg-primary/20 hover:border-primary/60"
                                         whileHover={{ 
                                             y: -5,
                                             boxShadow: "0 5px 15px rgba(13, 158, 216, 0.3)"
@@ -242,14 +242,14 @@ function Contactos() {
                             <div>
                                 <h4 className="text-lg font-medium mb-4 text-gray-300">Correo electrónico</h4>
                                 <motion.div 
-                                    className="flex items-center p-4 bg-[rgba(13,158,216,0.05)] rounded-lg border border-[rgba(13,158,216,0.2)]"
+                                    className="flex items-center p-4 bg-primary/5 rounded-lg border border-primary/20"
                                     whileHover={{ 
                                         backgroundColor: "rgba(13,158,216,0.1)",
                                         borderColor: "rgba(13,158,216,0.4)"
                                     }}
                                 >
                                     <motion.button
-                                        className="w-10 h-10 flex items-center justify-center bg-[rgba(13,158,216,0.1)] rounded-lg border border-[rgba(13,158,216,0.3)] mr-4 transition-all duration-300 hover:bg-[rgba(13,158,216,0.2)]"
+                                        className="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg border border-primary/30 mr-4 transition-all duration-300 hover:bg-primary/20"
                                         onClick={copy}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}

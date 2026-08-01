@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --primary: rgb(13, 158, 216);
+    --primary-rgb: 13 158 216;
+    --primary: rgb(var(--primary-rgb));
     --primary-light: rgba(13, 158, 216, 0.2);
     --primary-glow: rgba(13, 158, 216, 0.6);
     --backgroundsec: hsl(0, 1%, 23%);
@@ -112,7 +113,28 @@
     100% { stroke-dashoffset: 100; }
 }
 
+/* Owned replacement for daisyUI's .hero / .hero-content (D2) */
+.hero {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
 .hero-content {
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80rem;
+    gap: 1rem;
+    padding: 1rem;
     transform-style: preserve-3d;
 }
 

@@ -77,7 +77,7 @@ function GroupButons() {
                 id="btn"
                 download="CV Ramfi Aogusto Desarrollador Web React.pdf"
                 href={Cv}
-                className="btn-primary relative overflow-hidden px-6 py-3 rounded-lg font-semibold text-white flex items-center justify-center gap-2 min-w-[180px]"
+                className="relative overflow-hidden px-6 py-3 rounded-lg font-semibold text-white flex items-center justify-center gap-2 min-w-[180px] bg-primary/10 border border-primary/40 hover:bg-primary/20 hover:border-primary/60 transition-colors duration-200"
                 aria-label="Descargar CV"
                 tabIndex="0"
             >
@@ -85,7 +85,7 @@ function GroupButons() {
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="absolute inset-0 bg-gradient-to-r from-[rgba(13,158,216,0.2)] to-[rgba(79,70,229,0.2)] z-[-1]"
+                    className="absolute inset-0 bg-gradient-to-r from-primary/20 to-[rgba(79,70,229,0.2)] z-[-1]"
                 />
                 
                 <motion.span
@@ -127,7 +127,7 @@ function GroupButons() {
                     href="https://www.linkedin.com/in/ramfi-aogusto-de-la-cruz-geraldino-aa64b5272"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-icon-container relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[rgba(13,158,216,0.1)] to-[rgba(79,70,229,0.1)] border border-[rgba(255,255,255,0.15)] overflow-hidden group"
+                    className="social-icon-container relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-[rgba(79,70,229,0.1)] border border-[rgba(255,255,255,0.15)] overflow-hidden group"
                     aria-label="LinkedIn"
                     tabIndex="0"
                 >
@@ -161,7 +161,7 @@ function GroupButons() {
                     href="https://github.com/RamfiAogusto"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-icon-container relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[rgba(13,158,216,0.1)] to-[rgba(79,70,229,0.1)] border border-[rgba(255,255,255,0.15)] overflow-hidden group"
+                    className="social-icon-container relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-[rgba(79,70,229,0.1)] border border-[rgba(255,255,255,0.15)] overflow-hidden group"
                     aria-label="GitHub"
                     tabIndex="0"
                 >
